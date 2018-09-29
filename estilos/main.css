@@ -671,8 +671,6 @@ a:visited {
   }
   #contenedor1 , #cabeza{
     width: 470px;
-    max-width: 470px;
-    min-width: 470px;
   }
   #cabeza #titulo h1{
     font-size: 5em;
