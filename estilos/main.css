@@ -11,6 +11,8 @@ body{
   background: url(../imagenes/textura1.png);
   background-color: rgba(220, 220, 220, 0.9);
 }
+
+
 /*generando fuentes*/
 @font-face {
   font-family: "Fuente1";
@@ -24,6 +26,10 @@ body{
   font-family: "Fuente3";
   src: url("../fuentes/fuente3.ttf");
 }
+@font-face {
+  font-family: "Fuente4";
+  src: url("../fuentes/fuente4.ttf");
+}
 
 /*Barra de arriba de todo */
 #barraestado{
@@ -31,77 +37,54 @@ body{
   width: 100%;
   height: 4em;
   color: rgba(255, 255, 255, 0.7);
-  padding-top: 0.3em;
 }
-#barraestado #contacto{
-  list-style-image: url(../imagenes/contacto.png);
+#barraestado img{
+  margin-top: 0.4em;
 }
-#barraestado #numero{
-  list-style-image: url(../imagenes/telefono.png);
+#barraestado h1{
+  font-family: "Fuente4";
+  font-size: 5em;
+  margin-left: 1%;
 }
-#barraestado #fb{
-  list-style-image: url(../imagenes/fb.png);
+#barraestado #login , #barraestado #twitter , #barraestado #fb , #barraestado #numero ,#barraestado #contacto{
+  
+  width: 15%;
+  height: 3.5em;
+  list-style: none;
 }
-#barraestado #twitter{
-  list-style-image: url(../imagenes/twitter.png);
-}
-#barraestado #login{
-  list-style-image: url(../imagenes/login.png);
-}
-#barraestado #contacto:hover{
-  list-style-image: url(../imagenes/contactob.png);
-}
-#barraestado #numero:hover{
-  list-style-image: url(../imagenes/telefonob.png);
-}
-#barraestado #fb:hover{
-  list-style-image: url(../imagenes/fbb.png);
-}
-#barraestado #twitter:hover{
-  list-style-image: url(../imagenes/twitterb.png);
-}
-#barraestado #login:hover{
-  list-style-image: url(../imagenes/loginb.png);
-}
-#barraestado #login , #barraestado #twitter , #barraestado #fb , #barraestado #numero , #barraestado #contacto {
-  width: 10%;
-  max-width: 19em;
-  height: 4em;
-  max-height: 4em;
-  font-family: calibri , verdana;
-}
-#barraestado ul{
-  text-align: center;
-  list-style-position: inside;
-}
-#barraestado #login p, #barraestado #twitter p, #barraestado #fb p, #barraestado #numero p, #barraestado #contacto p {
-  font-size: 1.3em;
+#barraestado #login p, #barraestado #twitter p, #barraestado #fb p, #barraestado #numero p,#barraestado #contacto p{
+  text-align: left;
+  font-size: 1.6em;
+  color: white;
+  font-family: calibri,verdana;
   margin-top: -2em;
-  width: 100%;
-  padding-left: 20%;
+  margin-left: 17%;
+}
+#barraestado #login:hover, #barraestado #twitter:hover, #barraestado #fb:hover, #barraestado #numero:hover , #barraestado #contacto:hover{
+  background: url(../imagenes/textura4.png);
+  background-color: rgba(212, 89, 95, 0.7);
 }
 #barraestado #contacto{
-  margin-top: 0;
-}
-#barraestado #contacto p{
-  padding-left: 5%;
+  margin-left: 0.5%;
+  margin-top: -0.5em;
 }
 #barraestado #numero{
-  margin-left: 9%;
-  margin-top: -4em;
+  margin-top: -3.5em;
+  margin-left: 16%;
 }
-/* -----------------------------*/
 #barraestado #fb{
-  margin-left: 20%;
-  margin-top: -4em;
+  margin-top: -3.5em;
+  margin-left: 31.5%;
 }
 #barraestado #twitter{
-  margin-left: 31.5%;
-  margin-top: -4em;
+  margin-top: -3.5em;
+  margin-left: 47%;
+  width: 20%;
 }
 #barraestado #login{
-  margin-left: 89%;
-  margin-top: -4em;
+  margin-top: -3.5em;
+  margin-left: 84.5%;
+  width: 15%;
 }
 
 /*Cuerpo de la pagina*/
