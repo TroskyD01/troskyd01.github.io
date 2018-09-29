@@ -47,7 +47,7 @@ body{
   margin-left: 1%;
 }
 #barraestado #login , #barraestado #twitter , #barraestado #fb , #barraestado #numero ,#barraestado #contacto{
-  
+
   width: 15%;
   height: 3.5em;
   list-style: none;
@@ -101,7 +101,6 @@ body{
 #contenedor1 , #cabeza{
   width: 80%;
   max-width: 130em;
-  min-width: 50em;
   margin-top: 11em;
 }
 
