@@ -26,86 +26,86 @@ body{
 }
 
 /*Barra de arriba de todo */
-div#barraestado{
+#barraestado{
   background: rgba(30, 30, 30, 0.7);
   width: 100%;
   height: 4em;
   color: rgba(255, 255, 255, 0.7);
   padding-top: 0.3em;
 }
-div#barraestado #contacto{
+#barraestado #contacto{
   list-style-image: url(../imagenes/contacto.png);
 }
-div#barraestado #numero{
+#barraestado #numero{
   list-style-image: url(../imagenes/telefono.png);
 }
-div#barraestado #fb{
+#barraestado #fb{
   list-style-image: url(../imagenes/fb.png);
 }
-div#barraestado #twitter{
+#barraestado #twitter{
   list-style-image: url(../imagenes/twitter.png);
 }
-div#barraestado #login{
+#barraestado #login{
   list-style-image: url(../imagenes/login.png);
 }
-div#barraestado #contacto:hover{
+#barraestado #contacto:hover{
   list-style-image: url(../imagenes/contactob.png);
 }
-div#barraestado #numero:hover{
+#barraestado #numero:hover{
   list-style-image: url(../imagenes/telefonob.png);
 }
-div#barraestado #fb:hover{
+#barraestado #fb:hover{
   list-style-image: url(../imagenes/fbb.png);
 }
-div#barraestado #twitter:hover{
+#barraestado #twitter:hover{
   list-style-image: url(../imagenes/twitterb.png);
 }
-div#barraestado #login:hover{
+#barraestado #login:hover{
   list-style-image: url(../imagenes/loginb.png);
 }
-div#barraestado #login , #barraestado #twitter , #barraestado #fb , #barraestado #numero , #barraestado #contacto {
+#barraestado #login , #barraestado #twitter , #barraestado #fb , #barraestado #numero , #barraestado #contacto {
   width: 10%;
   max-width: 19em;
   height: 4em;
   max-height: 4em;
   font-family: calibri , verdana;
 }
-div#barraestado ul{
+#barraestado ul{
   text-align: center;
   list-style-position: inside;
 }
-div#barraestado #login p, #barraestado #twitter p, #barraestado #fb p, #barraestado #numero p, #barraestado #contacto p {
+#barraestado #login p, #barraestado #twitter p, #barraestado #fb p, #barraestado #numero p, #barraestado #contacto p {
   font-size: 1.3em;
   margin-top: -2em;
   width: 100%;
   padding-left: 20%;
 }
-div#barraestado #contacto{
+#barraestado #contacto{
   margin-top: 0;
 }
-div#barraestado #contacto p{
+#barraestado #contacto p{
   padding-left: 5%;
 }
-div#barraestado #numero{
+#barraestado #numero{
   margin-left: 9%;
   margin-top: -4em;
 }
 /* -----------------------------*/
-div#barraestado #fb{
+#barraestado #fb{
   margin-left: 20%;
   margin-top: -4em;
 }
-div#barraestado #twitter{
+#barraestado #twitter{
   margin-left: 31.5%;
   margin-top: -4em;
 }
-div#barraestado #login{
+#barraestado #login{
   margin-left: 89%;
   margin-top: -4em;
 }
 
 /*Cuerpo de la pagina*/
-div#contenedor1{
+#contenedor1{
   margin: auto;
   margin-top: 1%;
   height: auto;
@@ -115,7 +115,7 @@ div#contenedor1{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*sombra*/
 }
 
-div#contenedor1 , #cabeza{
+#contenedor1 , #cabeza{
   width: 80%;
   max-width: 130em;
   min-width: 50em;
@@ -123,27 +123,26 @@ div#contenedor1 , #cabeza{
 }
 
 /*titulo */
-div#cabeza{
+#cabeza{
   margin: auto;
   margin-top: 0.5em;
-
   height: 5em;
 }
-div#cabeza #titulo h1{
+#cabeza #titulo h1{
   font-size: 7.7em;
   margin-top: -0.2em;
   font-family: "fuente2" , verdana;
   color: rgba(0, 0, 0, 0.8);
   letter-spacing: 0.05em;
 }
-div#cabeza #titulo h2{
+#cabeza #titulo h2{
   font-size: 10em;
   margin-top: -0.9em;
   margin-left: 3.4em;
   color: rgba(255, 255, 255, 0.8);
   font-family: "fuente3" , calibri, helvetica;
 }
-div#cabeza #buscador{
+#cabeza #buscador{
   float: right;
   margin-top: -4.2em;
   width: 15%;
@@ -153,7 +152,7 @@ div#cabeza #buscador{
   border-top-left-radius: 0.35em;
   border-top-right-radius: 0.35em;
 }
-div#cabeza #buscador img{
+#cabeza #buscador img{
   float: right;
   width: 25%;
   height: 4em;
@@ -161,7 +160,7 @@ div#cabeza #buscador img{
   position: relative;
   border-top-right-radius: 0.35em;
 }
-div#cabeza #buscador #input1{
+#cabeza #buscador #input1{
   height: 4em;
   width: 73%;
   max-width: 14.5em;
@@ -174,12 +173,12 @@ div#cabeza #buscador #input1{
 }
 
 /*Un espacio separador*/
-div#separador{
+#separador{
   height: 1em;
 }
 
 /*Menu */
-div#menu{
+#menu{
   width: 100%;
   height: 5em;
   background-image: url(../imagenes/textura2.png);
@@ -190,189 +189,191 @@ div#menu{
   border-top-right-radius: 0.35em;
   color: white;
 }
-div#menu #inicio , #menu #tienda , #menu #catalogo , #menu #sala , #consultas{
+#menu #inicio , #menu #tienda , #menu #catalogo , #menu #sala , #consultas{
   background: url(../imagenes/textura4.png);
   background-color: rgba(212, 89, 95, 1);
   width: 10%;
   height: 3.5em;
   list-style: none;
 }
-div#menu #inicio p, #menu #tienda p, #menu #catalogo p, #menu #sala p , #menu #consultas p{
+#menu #inicio p, #menu #tienda p, #menu #catalogo p, #menu #sala p , #menu #consultas p{
   text-align: center;
   padding-top: 0.4em;
   font-size: 1.6em;
   color: white;
   font-family: calibri,verdana;
 }
-div#menu #inicio:hover, #menu #tienda:hover, #menu #catalogo:hover, #menu #sala:hover , #menu #consultas:hover{
+#menu #inicio:hover, #menu #tienda:hover, #menu #catalogo:hover, #menu #sala:hover , #menu #consultas:hover{
   background: url(../imagenes/textura4.png);
   background-color: rgba(212, 89, 95, 0.7);
 }
-div#menu #inicio{
+#menu #inicio{
   margin-left: 0.9%;
   margin-top: -0.5em;
   border-top-left-radius: 0.4em;
   border-bottom-left-radius: 0.4em;
 }
-div#menu #tienda{
+#menu #tienda{
   margin-top: -3.5em;
   margin-left: 11.1%;
 }
-div#menu #catalogo{
+#menu #catalogo{
   margin-top: -3.5em;
   margin-left: 21.3%;
 }
-div#menu #sala{
+#menu #sala{
   margin-top: -3.5em;
   margin-left: 31.5%;
 }
-div#menu #consultas{
+#menu #consultas{
   margin-top: -3.5em;
   margin-left: 41.7%;
   border-top-right-radius: 0.4em;
   border-bottom-right-radius: 0.4em;
 }
 /*Espacio grande con un juego*/
-div#masvendido{
+#masvendido{
   margin-left: 1%;
   width: 45%;
   max-width: 58em;
-  height: 28em;
+  height: 33em;
   box-shadow: 0px 13px 21px -10px rgba(0, 0, 0, 0.5); /*sombra*/
 }
-div#masvendido #gif{
+#masvendido #portada{
+  width: 100%;
+  height: inherit;
+}
+#masvendido #gif{
   width: 10%;
   height: auto;
   margin-left: 1%;
-  margin-top: -26em;
+  margin-top: -31em;
   float: left;
   z-index: 1000;
   position: relative;
 }
-div#masvendido:hover{
+#masvendido:hover{
   -webkit-box-shadow: 0px 1px 15px 1px rgba(0,0,0,1);
   -moz-box-shadow: 0px 1px 15px 1px rgba(0,0,0,1);
   box-shadow: 0px 1px 15px 1px rgba(0,0,0,1);
 }
-div#masvendido #portada{
-  width: 100%;
-  height: 28em;
-}
-div#masvendido #titulo{
+
+#masvendido #titulo{
  margin-top: -6em;
  background: rgba(0,0,0,0.5);
  z-index: 1000;
  position:relative;
  padding-bottom: 0.6em;
 }
-div#masvendido #titulo h1,h2,h3{
+#masvendido #titulo h1,h2,h3{
   color: white;
   margin-left: 0.5em;
 }
-div#masvendido #titulo h3:hover{
+#masvendido #titulo h3:hover{
   color: rgba(220, 0, 0, 0.9);
 }
-div#masvendido #titulo h1{
+#masvendido #titulo h1{
   font-size: 2em;
   letter-spacing: 0.25em;
 }
-div#masvendido #titulo h2{
+#masvendido #titulo h2{
   font-size: 1.7em;
   letter-spacing: 0.1em;
 }
-div#masvendido #titulo h3{
+#masvendido #titulo h3{
   font-size: 1.5em;
   letter-spacing: 0.1em;
 }
-div#masvendido #titulo img{
+#masvendido #titulo img{
   width: 2em;
   height: auto;
 }
-div#masvendido #titulo .titulo{
+#masvendido #titulo .titulo{
   text-align: left;
   width: 100%;
   max-width: 58em;
 }
-div#masvendido #titulo .comprar{
+#masvendido #titulo .comprar{
   text-align: right;
   padding-left: 22em;
   width: 100%;
   max-width: 58em;
 }
-div#masvendido #titulo .comprar , .titulo , .precio{
+#masvendido #titulo .comprar , .titulo , .precio{
   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   font-variant: small-caps;
 }
 
 /*tabla mas pequeña con otros juegos */
-div#nuevos{
-  margin-top: -28.05em;
+#nuevos{
+  margin-top: -33em;
   margin-right: 1%;
-  float: right;
-  width: 52.5%;
-  max-width: 69em;
-  height: 28em;
-  background: rgba(255, 255, 0, 0);
+  width: 53%;
+  margin-left: 46.4%;
+  height: 33em;
+  background: rgba(255, 25, 63, 0);
 
 }
-div#nuevos img{
+#nuevos ul{
+  list-style-type: none;
+}
+#nuevos ul li{
+  display: inline-block;
+  width: 32.6%;
+  border-bottom: 1px solid black;
+  background: blue;
+  max-height: 33em;
+  margin-bottom: 1em;
+}
+#nuevos img{
   width: 100%;
-  height: 13.63em;
-
+  height: 16em;
 }
-div#nuevos #gif{
+#nuevos #gif{
   width: 15%;
-  height: auto;
-  margin-left: 0.5%;
-  margin-top: -13em;
+  height: 1.5em;
   float: left;
   z-index: 1000;
-  position:relative;
+  position: relative;
+  margin-top: -14em;
+  margin-left: 1%;
 }
-div#nuevos p{
+#nuevos p{
   color: white;
+  font-size: 1.3em;
   font-weight: normal;
   font-variant: small-caps;
   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
   text-align: right;
-  margin-right: 1%;
+  margin-right: 2%;
+  margin-top: -2em;
 }
-div#nuevos th p , td p{
-  margin-top: -1.6em;
-}
-div#nuevos th img{
-  margin-top: -0.11em;
-
-}
-div#nuevos td img{
-  margin-top: 0.7em;
-}
-div#nuevos p:hover{
+#nuevos p:hover{
   color: rgba(220, 0, 0, 0.9);
 }
-div#nuevos #i1:hover , #nuevos #i2:hover , #nuevos #i3:hover , #nuevos #i4:hover , #nuevos #i5:hover , #nuevos #i6:hover{
-  -webkit-box-shadow: 0px 27px 29px 2px rgba(0,0,0,0.51);
-  -moz-box-shadow: 0px 27px 29px 2px rgba(0,0,0,0.51);
-  box-shadow: 0px 27px 29px 2px rgba(0,0,0,0.51);
+#nuevos #hover:hover{
+  -webkit-box-shadow: 0px 1px 15px 1px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 1px 15px 1px rgba(0,0,0,1);
+  box-shadow: 0px 1px 15px 1px rgba(0,0,0,1);
 }
 
 /*tipos de pedido */
-div#pedidos{
+#pedidos{
   margin: 1%;
   height: 13.2em;
 }
-div#pedidos .fisico h1 , #pedidos .online h1 , #pedidos .promos h1{
+#pedidos .fisico h1 , #pedidos .online h1 , #pedidos .promos h1{
   margin-left: 1%;
   margin-top: -2em;
 }
-div#pedidos .online:hover , div#pedidos .fisico:hover , div#pedidos .promos:hover{
+#pedidos .online:hover , #pedidos .fisico:hover , #pedidos .promos:hover{
   border: 0.2em solid rgba(255, 0, 0, 0.6);
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   padding-left: 0;
   padding-right: 0;
 }
-div#pedidos .online , #pedidos .fisico , #pedidos .promos {
+#pedidos .online , #pedidos .fisico , #pedidos .promos {
   width: 32%;
   background-image: url(../imagenes/textura3.png);
   background-color: black;
@@ -380,14 +381,14 @@ div#pedidos .online , #pedidos .fisico , #pedidos .promos {
   padding: 0.2em;
   color: white;
 }
-div#pedidos .online{
+#pedidos .online{
   height: 9em;
   list-style-image: url(../imagenes/online.png);
   padding-top: 1em;
   padding-bottom: 1em;
   line-height: 2.5em;
 }
-div#pedidos .fisico{
+#pedidos .fisico{
   height: 9em;
   margin-left: 33.8%;
   margin-top: -11em;
@@ -396,7 +397,7 @@ div#pedidos .fisico{
   padding-top: 1em;
   padding-bottom: 1em;
 }
-div#pedidos .promos{
+#pedidos .promos{
   height: 9em;
   margin-left: 67.6%;
   margin-top: -11em;
@@ -405,23 +406,23 @@ div#pedidos .promos{
   padding-top: 1em;
   padding-bottom: 1em;
 }
-div#pedidos ul{
+#pedidos ul{
   text-align: center;
   list-style-position: inside;
 }
-div#pedidos li{
+#pedidos li{
   color: white;
 }
-div#pedidos li h1 {
+#pedidos li h1 {
   font-size: 1.6em;
 }
-div#pedidos li h2 {
+#pedidos li h2 {
   font-size: 1.3em;
   font-weight: normal;
 }
 
 /*novedades */
-div#novedadestitulo{
+#novedadestitulo{
   width: 97.8%;
   max-width: 128em;
   margin-left: 1%;
@@ -430,13 +431,13 @@ div#novedadestitulo{
   background-image: url(../imagenes/textura2.png);
   background-color: black;
 }
-div#novedadestitulo h1{
+#novedadestitulo h1{
   color: white;
   line-height: 2.5em;
   padding-left: 1em;
   font-size: 1.5em;
 }
-div#novedadescajon{
+#novedadescajon{
   width: 97.8%;
   max-width: 128em;
   margin-left: 1%;
@@ -445,7 +446,7 @@ div#novedadescajon{
   background-color: rgba(200, 200, 200, 1);
   overflow:scroll;
 }
-div#novedadescajon p{
+#novedadescajon p{
   padding: 1%;
   font-size: 1.1em;
   letter-spacing: 0.2em;
@@ -453,7 +454,7 @@ div#novedadescajon p{
 }
 
 /* Mi nombre abajo de todo */
-div#marca{
+#marca{
   text-align: center;
   color: white;
   font-weight: normal;
@@ -463,35 +464,35 @@ div#marca{
 }
 
 /* Pagina extendida de juego */
-div#extendidaJuego #titulo{
+#extendidaJuego #titulo{
   width: 98%;
   max-width: 128em;
   margin-left: 1%;
   margin-top: 1em;
   height: 4em;
 }
-div#extendidaJuego #titulo h1{
+#extendidaJuego #titulo h1{
   color: white;
   line-height: 2em;
   font-size: 2em;
   color: black;
 }
-div#extendidaJuego #fotomayor{
+#extendidaJuego #fotomayor{
   background: black;
   width: 65%;
   height: 40em;
   margin-top: 1em;
   margin-left: 1%;
 }
-div#extendidaJuego #fotomayor video{
+#extendidaJuego #fotomayor video{
   width: 100%;
   height: 40em;
 }
-div#extendidaJuego #fotomayor img{
+#extendidaJuego #fotomayor img{
   width: 100%;
   height: 40em;
 }
-div#extendidaJuego #caracteristicas{
+#extendidaJuego #caracteristicas{
   background-color: rgba(200, 200, 200, 1);
   width: 30%;
   height: 37em;
@@ -499,7 +500,7 @@ div#extendidaJuego #caracteristicas{
   margin-left: 69%;
   overflow: hidden;
 }
-div#extendidaJuego #caracteristicas table{
+#extendidaJuego #caracteristicas table{
   font-family: calibri , verdana;
   font-size: 1.5em;
   text-align: left;
@@ -508,7 +509,7 @@ div#extendidaJuego #caracteristicas table{
   border-collapse:separate;
   border-spacing:0.1em;
 }
-div#extendidaJuego #portada{
+#extendidaJuego #portada{
   width: 30%;
   height: 20em;
   margin-left: 5%;
@@ -517,25 +518,25 @@ div#extendidaJuego #portada{
   float: right;
 
 }
-div#extendidaJuego #fotomenor{
+#extendidaJuego #fotomenor{
   width: 65%;
   height: 17em;
   margin-top: -17em;
   margin-left: 1%;
 }
-div#extendidaJuego #fotomenor #img1 , #extendidaJuego #fotomenor #img2 , #extendidaJuego #fotomenor #img3{
+#extendidaJuego #fotomenor #img1 , #extendidaJuego #fotomenor #img2 , #extendidaJuego #fotomenor #img3{
   width: 100%;
   height: 17em;
   margin-top: -0.15em;
   z-index: 100;
 }
-div#extendidaJuego #fotomenor #img1{
+#extendidaJuego #fotomenor #img1{
   margin-left: -0.3em;
 }
-div#extendidaJuego #fotomenor #img3{
+#extendidaJuego #fotomenor #img3{
   margin-right: -0.4em;
 }
-div#extendidaJuego #comprar{
+#extendidaJuego #comprar{
   width: 98%;
   max-width: 128em;
   margin-left: 1%;
@@ -543,17 +544,17 @@ div#extendidaJuego #comprar{
   height: 10em;
   background-color: rgba(200, 200, 200, 1);
 }
-div#extendidaJuego #comprar #estrellas{
+#extendidaJuego #comprar #estrellas{
   width: 30%;
   height: 3.5em;
   margin-left: -70%;
   float : left;
 }
-div#extendidaJuego #comprar  th ,#extendidaJuego #comprar td{
+#extendidaJuego #comprar  th ,#extendidaJuego #comprar td{
   width: 50%;
   height: 4em;
 }
-div#extendidaJuego #comprar #carro{
+#extendidaJuego #comprar #carro{
   width: 5em;
   height: auto;
   margin-left: -10%;
@@ -561,7 +562,7 @@ div#extendidaJuego #comprar #carro{
   position: relative;
   z-index: 1000;
 }
-div#extendidaJuego #comprar h2 , #comprar h1{
+#extendidaJuego #comprar h2 , #comprar h1{
   color: black;
   font-size: 1.7em;
   font-weight: normal;
@@ -571,25 +572,25 @@ div#extendidaJuego #comprar h2 , #comprar h1{
   text-align: left;
   margin-top: 0.3em;
 }
-div#extendidaJuego #comprar #asd2{
+#extendidaJuego #comprar #asd2{
   text-align: right;
   margin-right: 2%;
   font-size: 2em;
 }
-div#extendidaJuego #comprar #asd1{
+#extendidaJuego #comprar #asd1{
   margin-left: -80%;
 }
-div#extendidaJuego #comprar #asd1 , #extendidaJuego #comprar #asd2{
+#extendidaJuego #comprar #asd1 , #extendidaJuego #comprar #asd2{
   color: white;
   text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
-div#extendidaJuego #comprar h1{
+#extendidaJuego #comprar h1{
   font-size: 3em;
 }
-div#extendidaJuego #comprar #nombre{
+#extendidaJuego #comprar #nombre{
   width: 50%;
 }
-div#extendidaJuego #fondoboton{
+#extendidaJuego #fondoboton{
   background-image: url(../imagenes/textura3.png);
   background-color: rgba(255, 0, 0, 0.7);
   width: 23%;
@@ -599,7 +600,7 @@ div#extendidaJuego #fondoboton{
   border-radius: 2em;
   margin-left: 71.5%;
 }
-div#extendidaJuego #fondoboton:hover{
+#extendidaJuego #fondoboton:hover{
   background-color: rgba(255, 80, 100, 1);
 }
 
@@ -633,56 +634,101 @@ a:visited {
 }
 
 /* Estilos del catalogo */
-div#contenedor1 #tituloCatalogo{
+#contenedor1 #catalogocentral ul{
+  list-style-type: none;
+}
+#contenedor1 #catalogocentral ul li{
+  display: inline-block;
+  width: 19.4%;
+  margin-left: 0.3%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid black;
+}
+#contenedor1 #tituloCatalogo{
   width: 98%;
   max-width: 128em;
   margin-left: 1%;
   margin-top: 1em;
   height: 4em;
 }
-div#contenedor1 #catalogocentral{
-  background: none;
+#contenedor1 #catalogocentral{
   margin: 1%;
-  border: 1.5px solid black;
-  border-radius: 2em;
+  border: 1px solid black;
+  border-radius: 0.5em;
 }
-div#catalogocentral #juego1{
-  list-style-image: url(../imagenes/juegos/meatboy/iconolista.png);
-  list-style-position: inside;
+#catalogocentral #juego img{
+  width: 100%;
+  height: 10em;
 }
-div#catalogocentral #juego2{
-  list-style-image: url(../imagenes/juegos/dirt/iconolista.png);
+@media screen and (max-width : 600px) and (min-width : 500px){
+  #contenedor1 #catalogocentral ul li{
+    width: 30%;
+  }
 }
-div#catalogocentral #juego3{
-  list-style-image: url(../imagenes/juegos/csgo/iconolista.png);
-}
-div#catalogocentral #juego4{
-  list-style-image: url(../imagenes/juegos/dsjapan/iconolista.png);
-}
-div#catalogocentral #juego5{
-  list-style-image: url(../imagenes/juegos/gtasa/iconolista.png);
-}
-div#catalogocentral #juego6{
-  list-style-image: url(../imagenes/juegos/sniper/iconolista.png);
-}
-div#catalogocentral #juego7{
-  list-style-image: url(../imagenes/juegos/farcry/iconolista.png);
-}
-div#catalogocentral #relleno{
-  list-style-image: url(../imagenes/relleno.png);
-}
-div#catalogocentral #icono{
-  list-style-image: none;
-  list-style-type: none;
-}
-div#catalogocentral #listado{
-  margin: 1em 0 1em 1.5%;
-  display: flex;
-  font-weight: bold;
-  font-size: 1.3em;
-}
-div#catalogocentral{
-  list-style-position: inside;
+@media screen and (max-width : 499px){
+  #contenedor1 #catalogocentral ul li{
+    width: 85%;
+    margin-left: 7.5%;
+  }
+  #catalogocentral #juego img{
+    width: 100%;
+    height: 15em;
+  }
+  #contenedor1 #catalogocentral p{
+    font-size: 1.4em;
+  }
+  #contenedor1 , #cabeza{
+    width: 470px;
+    max-width: 470px;
+    min-width: 470px;
+  }
+  #cabeza #titulo h1{
+    font-size: 5em;
+    margin-top: -0.2em;
+    letter-spacing: 0.05em;
+  }
+  #cabeza #titulo h2{
+    font-size: 8.8em;
+    margin-top: -0.9em;
+    margin-left: 2.5em;
+  }
+  #menu{
+    width: 100%;
+    height: 5em;
+    margin-top: 5em;
+    margin-bottom: 1em;
+  }
+  #menu #inicio , #menu #tienda , #menu #catalogo , #menu #sala , #consultas{
+    width: 19.2%;
+  }
+  #menu #inicio p, #menu #tienda p, #menu #catalogo p, #menu #sala p , #menu #consultas p{
+    text-align: center;
+    padding-top: 0.2em;
+    font-size: 2em;
+  }
+  #menu #inicio{
+    margin-left: 0.5%;
+  }
+  #menu #tienda{
+    margin-left: 20.3%;
+  }
+  #menu #catalogo{
+    margin-left: 40.25%;
+  }
+  #menu #sala{
+    margin-left: 60.2%;
+  }
+  #menu #consultas{
+    margin-left: 80.1%;
+  }
+  #cabeza #buscador{
+    float: right;
+    margin-top: 1em;
+    margin-right: 0.5em;
+    width: 30%;
+    max-width: 20em;
+  }
 }
 /* Estilos de formulario de consultas */
 #consultasform{
