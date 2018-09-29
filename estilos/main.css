@@ -669,8 +669,11 @@ a:visited {
   #contenedor1 #catalogocentral p{
     font-size: 1.4em;
   }
+  #barraestado{
+    width: 100%;
+  }
   #contenedor1 , #cabeza{
-    width: 470px;
+    width: 99%;
   }
   #cabeza #titulo h1{
     font-size: 5em;
