@@ -723,7 +723,7 @@ a:visited {
   #menu #inicio p, #menu #tienda p, #menu #catalogo p, #menu #sala p , #menu #consultas p{
     text-align: center;
     padding-top: 0.2em;
-    font-size: 2em;
+    font-size: 1.7em;
   }
   #menu #inicio{
     margin-left: 0.5%;
