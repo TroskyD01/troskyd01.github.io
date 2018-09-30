@@ -495,17 +495,18 @@ body{
   margin-top: -17em;
   margin-left: 1%;
 }
-#extendidaJuego #fotomenor #img1 , #extendidaJuego #fotomenor #img2 , #extendidaJuego #fotomenor #img3{
+#extendidaJuego #fotomenor ul{
+  list-style-type: none;
+}
+#extendidaJuego #fotomenor ul li{
+  display: inline-block;
+  width: 33%;
+  height: 17em;
+  margin-bottom: 0.4em;
+}
+#extendidaJuego #fotomenor img{
   width: 100%;
   height: 17em;
-  margin-top: -0.15em;
-  z-index: 100;
-}
-#extendidaJuego #fotomenor #img1{
-  margin-left: -0.3em;
-}
-#extendidaJuego #fotomenor #img3{
-  margin-right: -0.4em;
 }
 #extendidaJuego #comprar{
   width: 98%;
@@ -515,6 +516,7 @@ body{
   height: 10em;
   background-color: rgba(200, 200, 200, 1);
 }
+
 #extendidaJuego #comprar #estrellas{
   width: 30%;
   height: 3.5em;
@@ -849,6 +851,121 @@ a:visited {
   /*novedades */
   #novedadestitulo{
     margin-top: 7.2em;
+  }
+  /*Estilos de los juegos */
+
+  #extendidaJuego #fotomayor{
+    background: black;
+    width: 98%;
+    height: 30em;
+    margin-top: 1em;
+    margin-left: 1%;
+  }
+  #extendidaJuego #fotomayor video , #extendidaJuego #fotomayor img{
+    width: 100%;
+    height: 30em;
+  }
+  #extendidaJuego #caracteristicas{
+    width: 49%;
+    margin-top: -17em;
+    margin-left: 50%;
+    overflow: scroll;
+    height: 33em;
+  }
+  #extendidaJuego #portada{
+    width: 48%;
+    height: 17em;
+    margin-left: 1%;
+    margin-top: 1em;
+    margin-right: 1%;
+  }
+  #extendidaJuego #portada img{
+    width: 100%;
+    height: inherit;
+  }
+  #extendidaJuego #fotomenor{
+    width: 48%;
+    height: 15.5em;
+    margin-top: -15.5em;
+    margin-left: 1%;
+    overflow: scroll;
+  }
+  #extendidaJuego #fotomenor ul{
+    list-style-type: none;
+
+  }
+  #extendidaJuego #fotomenor ul li{
+    width: 100%;
+    height: 15.5em;
+    margin-bottom: 0.4em;
+  }
+  #extendidaJuego #fotomenor img{
+    width: 100%;
+    height: inherit;
+  }
+  #extendidaJuego #comprar{
+    width: 98%;
+    max-width: 128em;
+    margin-left: 1%;
+    margin-top: 1em;
+    height: 10em;
+    background-color: rgba(200, 200, 200, 1);
+  }
+  #extendidaJuego #comprar #estrellas{
+    width: 30%;
+    height: 3.5em;
+    margin-left: -70%;
+    float : left;
+  }
+  #extendidaJuego #comprar  th ,#extendidaJuego #comprar td{
+    width: 50%;
+    height: 4em;
+  }
+  #extendidaJuego #comprar #carro{
+    width: 5em;
+    height: auto;
+    margin-left: -10%;
+    float: left;
+    position: relative;
+    z-index: 1000;
+  }
+  #extendidaJuego #comprar h2 , #comprar h1{
+    color: black;
+    font-size: 1.7em;
+    font-weight: normal;
+    font-variant: small-caps;
+    letter-spacing: 0.3em;
+    word-spacing: 0.5em;
+    text-align: left;
+    margin-top: 0.3em;
+  }
+  #extendidaJuego #comprar #asd2{
+    text-align: right;
+    margin-right: 2%;
+    font-size: 2em;
+  }
+  #extendidaJuego #comprar #asd1{
+    margin-left: -80%;
+  }
+  #extendidaJuego #comprar #asd1 , #extendidaJuego #comprar #asd2{
+    color: white;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  }
+  #extendidaJuego #comprar h1{
+    font-size: 3em;
+  }
+  #extendidaJuego #comprar #nombre{
+    width: 50%;
+  }
+  #extendidaJuego #fondoboton{
+    background-image: url(../imagenes/textura3.png);
+    background-color: rgba(255, 0, 0, 0.7);
+    width: 23%;
+    max-width: 80em;
+    height: 9em;
+    margin-top: -9.5em;
+    border-radius: 2em;
+    margin-left: 71.5%;
   }
 }
 /* Estilos de formulario de consultas */
