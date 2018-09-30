@@ -224,7 +224,6 @@ body{
 #masvendido #fondo img, #masvendido #fondo{
   width: 100%;
   height: 32.6em;
-  box-shadow: 0px 13px 21px -10px rgba(0, 0, 0, 0.5);
 }
 #masvendido #fondo img{
   margin-top: -7.3em;
@@ -446,7 +445,6 @@ body{
   color: white;
   line-height: 2em;
   font-size: 2em;
-  color: black;
 }
 #extendidaJuego #fotomayor{
   background: black;
@@ -465,10 +463,10 @@ body{
 }
 #extendidaJuego #caracteristicas{
   background-color: rgba(200, 200, 200, 1);
-  width: 30%;
+  width: 32%;
   height: 37em;
-  margin-top: -19em;
-  margin-left: 69%;
+  margin-top: 1em;
+  margin-left: 67%;
   overflow: hidden;
 }
 #extendidaJuego #caracteristicas table{
@@ -481,13 +479,15 @@ body{
   border-spacing:0.1em;
 }
 #extendidaJuego #portada{
-  width: 30%;
+  width: 32%;
   height: 20em;
-  margin-left: 5%;
+  margin-left: 67%;
   margin-top: -40em;
   margin-right: 1%;
-  float: right;
-
+}
+#extendidaJuego #portada img{
+  width: 100%;
+  height: inherit;
 }
 #extendidaJuego #fotomenor{
   width: 65%;
@@ -918,4 +918,15 @@ a:visited {
 #registroform #enviarb{
   margin: 1em 0 1em 1em;
   color: red;
+}
+/* titulos de toda la pagina */
+#extendidaJuego #titulo h1 , #registroform h1 , #consultasform h1 , #contenedor1 #tituloCatalogo{
+  color: white;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+/* sombras de toda la pagina */
+#extendidaJuego #fotomayor , #extendidaJuego #caracteristicas , #extendidaJuego #portada ,#extendidaJuego #fotomenor img , #extendidaJuego #comprar , #masvendido #fondo img {
+  -webkit-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
 }
