@@ -689,6 +689,7 @@ a:visited {
   margin-left: 1em;
   margin-top: -1em;
   float: left;
+  overflow: hidden;
 }
 /* sombras de toda la pagina */
 #extendidaJuego #fotomayor , #extendidaJuego #caracteristicas , #extendidaJuego #portada ,#extendidaJuego #fotomenor img , #extendidaJuego #comprar , #masvendido #fondo img {
@@ -703,12 +704,7 @@ a:visited {
   margin: 2em 3em 1em 3em;
 }
 
-@media screen and (max-width : 600px) and (min-width : 500px){
-  #contenedor1 #catalogocentral ul li{
-    width: 30%;
-  }
-}
-@media screen and (max-width : 499px) and (orientation : landscape){
+@media only screen and (max-width : 499px){
 /* Estilos del catalogo */
   #contenedor1 #catalogocentral ul li{
     width: 85%;
@@ -953,10 +949,12 @@ a:visited {
     margin-top: -15em;
     margin-left: 1%;
     overflow: scroll;
+    -webkit-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
   }
   #extendidaJuego #fotomenor ul{
     list-style-type: none;
-
   }
   #extendidaJuego #fotomenor ul li{
     width: 100%;
@@ -973,4 +971,63 @@ a:visited {
     border-radius: 1em;
     margin: 2em 0.5em 1em 0.5em;
   }
+}
+@media only screen and (min-width: 500px) and (max-width: 750px) {
+  /* Estilos del cuerpo */
+    #contenedor1 , #cabeza{
+      width: 99%;
+    }
+    #cabeza #titulo h1{
+      font-size: 4.8em;
+      margin-top: -0.2em;
+      letter-spacing: -0.01em;
+    }
+    #cabeza #titulo h2{
+      font-size: 7.5em;
+      margin-top: -0.7em;
+      margin-left: 45%;
+      letter-spacing: -0.01em;
+    }
+  /* Estilos del menu */
+    #menu{
+      width: 100%;
+      height: 5em;
+      margin-top: 5em;
+      margin-bottom: 1em;
+    }
+    #menu #inicio , #menu #tienda , #menu #catalogo , #menu #sala , #consultas{
+      width: 19.2%;
+    }
+    #menu #inicio p, #menu #tienda p, #menu #catalogo p, #menu #sala p , #menu #consultas p{
+      text-align: center;
+      padding-top: 0.4em;
+      font-size: 1.5em;
+    }
+    #menu #inicio{
+      margin-left: 0.5%;
+    }
+    #menu #tienda{
+      margin-left: 20.3%;
+    }
+    #menu #catalogo{
+      margin-left: 40.25%;
+    }
+    #menu #sala{
+      margin-left: 60.2%;
+    }
+    #menu #consultas{
+      margin-left: 80.1%;
+    }
+}
+@media only screen and (min-width: 751px) and (max-width: 1024px) {
+  /* Estilos del cuerpo */
+    #contenedor1 , #cabeza{
+      width: 97%;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  /* Estilos del cuerpo */
+    #contenedor1 , #cabeza{
+      width: 95%;
+    }
 }
