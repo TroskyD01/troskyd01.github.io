@@ -624,6 +624,85 @@ a:visited {
   width: 100%;
   height: 10em;
 }
+/* Estilos de formulario de consultas */
+#consultasform{
+  border: 1px solid gray;
+  border-radius: 1em;
+  margin: 2em 3em 1em 3em;
+}
+#consultasform #comentario{
+  width: 30em;
+  height: 20em;
+  text-align: left;
+  line-height: 1em;
+  margin-left: 1em;
+}
+#consultasform p{
+  margin-left: 1em;
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+#consultasform input{
+  margin-left: 1em;
+}
+#consultasform #comentario{
+  width: 90%;
+  height: 10em;
+}
+#consultasform #enviarb{
+  margin: 1em 0 1em 1em;
+  color: red;
+}
+/* Estilos de formulario de registro */
+#registroform{
+  border: 1px solid gray;
+  border-radius: 1em;
+  margin: 2em 3em 1em 3em;
+}
+#registroform #comentario{
+  width: 20em;
+  height: 20em;
+  text-align: left;
+  line-height: 1em;
+  margin-left: 1em;
+}
+#registroform p{
+  margin-left: 1em;
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+#registroform input{
+  margin-left: 1em;
+}
+#registroform #enviarb{
+  margin: 1em 0 1em 1em;
+  color: red;
+}
+/* titulos de toda la pagina */
+#extendidaJuego #titulo span , #registroform span , #consultasform span , #catalogocentral span{
+  color: white;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  font-size: 2em;
+  background: white;
+  white-space: nowrap;
+  padding: 0 0.3em 0 0.3em;
+  margin-left: 1em;
+  margin-top: -1em;
+  float: left;
+}
+/* sombras de toda la pagina */
+#extendidaJuego #fotomayor , #extendidaJuego #caracteristicas , #extendidaJuego #portada ,#extendidaJuego #fotomenor img , #extendidaJuego #comprar , #masvendido #fondo img {
+  -webkit-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
+}
+/* bordes de caja de toda la pagina */
+#registroform , #consultasform, #contenedor1 #catalogocentral , #extendidaJuego{
+  border: 1px solid gray;
+  border-radius: 1em;
+  margin: 2em 3em 1em 3em;
+}
+
 @media screen and (max-width : 600px) and (min-width : 500px){
   #contenedor1 #catalogocentral ul li{
     width: 30%;
@@ -838,7 +917,6 @@ a:visited {
     margin-top: 7.2em;
   }
   /*Estilos de los juegos */
-
   #extendidaJuego #fotomayor{
     background: black;
     width: 98%;
@@ -889,146 +967,10 @@ a:visited {
     width: 100%;
     height: inherit;
   }
-  #extendidaJuego #comprar{
-    width: 98%;
-    max-width: 128em;
-    margin-left: 1%;
-    margin-top: 1em;
-    height: 10em;
-    background-color: rgba(200, 200, 200, 1);
+  /* bordes de caja de toda la pagina */
+  #registroform , #consultasform, #contenedor1 #catalogocentral , #extendidaJuego{
+    border: 1px solid gray;
+    border-radius: 1em;
+    margin: 2em 0.5em 1em 0.5em;
   }
-  #extendidaJuego #comprar #estrellas{
-    width: 30%;
-    height: 3.5em;
-    margin-left: -70%;
-    float : left;
-  }
-  #extendidaJuego #comprar  th ,#extendidaJuego #comprar td{
-    width: 50%;
-    height: 4em;
-  }
-  #extendidaJuego #comprar #carro{
-    width: 5em;
-    height: auto;
-    margin-left: -10%;
-    float: left;
-    position: relative;
-    z-index: 1000;
-  }
-  #extendidaJuego #comprar h2 , #comprar h1{
-    color: black;
-    font-size: 1.7em;
-    font-weight: normal;
-    font-variant: small-caps;
-    letter-spacing: 0.3em;
-    word-spacing: 0.5em;
-    text-align: left;
-    margin-top: 0.3em;
-  }
-  #extendidaJuego #comprar #asd2{
-    text-align: right;
-    margin-right: 2%;
-    font-size: 2em;
-  }
-  #extendidaJuego #comprar #asd1{
-    margin-left: -80%;
-  }
-  #extendidaJuego #comprar #asd1 , #extendidaJuego #comprar #asd2{
-    color: white;
-    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-  }
-  #extendidaJuego #comprar h1{
-    font-size: 3em;
-  }
-  #extendidaJuego #comprar #nombre{
-    width: 50%;
-  }
-  #extendidaJuego #fondoboton{
-    background-image: url(../imagenes/textura3.png);
-    background-color: rgba(255, 0, 0, 0.7);
-    width: 23%;
-    max-width: 80em;
-    height: 9em;
-    margin-top: -9.5em;
-    border-radius: 2em;
-    margin-left: 71.5%;
-  }
-}
-/* Estilos de formulario de consultas */
-#consultasform{
-  border: 1px solid gray;
-  border-radius: 1em;
-  margin: 2em 3em 1em 3em;
-}
-#consultasform #comentario{
-  width: 30em;
-  height: 20em;
-  text-align: left;
-  line-height: 1em;
-  margin-left: 1em;
-}
-#consultasform p{
-  margin-left: 1em;
-  margin-top: 1em;
-  font-size: 1.2em;
-}
-#consultasform input{
-  margin-left: 1em;
-}
-#consultasform #comentario{
-  width: 90%;
-  height: 10em;
-}
-#consultasform #enviarb{
-  margin: 1em 0 1em 1em;
-  color: red;
-}
-/* Estilos de formulario de registro */
-#registroform{
-  border: 1px solid gray;
-  border-radius: 1em;
-  margin: 2em 3em 1em 3em;
-}
-#registroform #comentario{
-  width: 20em;
-  height: 20em;
-  text-align: left;
-  line-height: 1em;
-  margin-left: 1em;
-}
-#registroform p{
-  margin-left: 1em;
-  margin-top: 1em;
-  font-size: 1.2em;
-}
-#registroform input{
-  margin-left: 1em;
-}
-#registroform #enviarb{
-  margin: 1em 0 1em 1em;
-  color: red;
-}
-/* titulos de toda la pagina */
-#extendidaJuego #titulo span , #registroform span , #consultasform span , #catalogocentral span{
-  color: white;
-  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-  font-size: 2em;
-  background: white;
-  white-space: nowrap;
-  padding: 0 0.3em 0 0.3em;
-  margin-left: 1em;
-  margin-top: -1em;
-  float: left;
-}
-/* sombras de toda la pagina */
-#extendidaJuego #fotomayor , #extendidaJuego #caracteristicas , #extendidaJuego #portada ,#extendidaJuego #fotomenor img , #extendidaJuego #comprar , #masvendido #fondo img {
-  -webkit-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
-  -moz-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
-  box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
-}
-/* bordes de caja de toda la pagina */
-#registroform , #consultasform, #contenedor1 #catalogocentral , #extendidaJuego{
-  border: 1px solid gray;
-  border-radius: 1em;
-  margin: 2em 3em 1em 3em;
 }
