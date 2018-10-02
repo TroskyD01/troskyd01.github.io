@@ -920,25 +920,25 @@ a:visited {
   #extendidaJuego #fotomayor{
     background: black;
     width: 98%;
-    height: 30em;
+    height: 27em;
     margin-top: 1em;
     margin-left: 1%;
   }
   #extendidaJuego #fotomayor video , #extendidaJuego #fotomayor img{
     width: 100%;
-    height: 30em;
+    height: 27em;
   }
   #extendidaJuego #caracteristicas{
     width: 49%;
-    margin-top: -18.88em;
+    margin-top: -14.38em;
     margin-left: 50%;
     overflow: scroll;
-    height: 36.66em;
+    height: 31.66em;
     font-size: 0.9em;
   }
   #extendidaJuego #portada{
     width: 48%;
-    height: 17em;
+    height: 13em;
     margin-left: 1%;
     margin-top: 1em;
     margin-right: 1%;
@@ -949,8 +949,8 @@ a:visited {
   }
   #extendidaJuego #fotomenor{
     width: 48%;
-    height: 15.5em;
-    margin-top: -15.5em;
+    height: 15em;
+    margin-top: -15em;
     margin-left: 1%;
     overflow: scroll;
   }
@@ -960,7 +960,7 @@ a:visited {
   }
   #extendidaJuego #fotomenor ul li{
     width: 100%;
-    height: 15.5em;
+    height: 15em;
     margin-bottom: 0.4em;
   }
   #extendidaJuego #fotomenor img{
