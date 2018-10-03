@@ -703,8 +703,17 @@ a:visited {
   border-radius: 1em;
   margin: 2em 3em 1em 3em;
 }
+#contenedor1 #relleno{
+  width: 45%;
+  height: 5.7em;
+  background: black;
+  margin-top: -6em;
+  margin-left: 1%;
+  display: none;
+}
 
-@media only screen and (max-width : 499px){
+  /*ESTILOS PARA CELULARES */
+@media only screen and (max-width : 500px){
 /* Estilos del catalogo */
   #contenedor1 #catalogocentral ul li{
     width: 85%;
@@ -949,9 +958,9 @@ a:visited {
     margin-top: -15em;
     margin-left: 1%;
     overflow: scroll;
-    -webkit-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
-    box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 1px 13px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 1px 13px 3px rgba(0,0,0,0.75);
+    box-shadow: 3px 1px 13px 3px rgba(0,0,0,0.75);
   }
   #extendidaJuego #fotomenor ul{
     list-style-type: none;
@@ -959,11 +968,14 @@ a:visited {
   #extendidaJuego #fotomenor ul li{
     width: 100%;
     height: 15em;
-    margin-bottom: 0.4em;
+    margin-bottom: 0;
   }
   #extendidaJuego #fotomenor img{
     width: 100%;
     height: inherit;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
   }
   /* bordes de caja de toda la pagina */
   #registroform , #consultasform, #contenedor1 #catalogocentral , #extendidaJuego{
@@ -972,62 +984,208 @@ a:visited {
     margin: 2em 0.5em 1em 0.5em;
   }
 }
-@media only screen and (min-width: 500px) and (max-width: 750px) {
+
+  /*ESTILOS PARA TABLETS */
+@media only screen and (min-width: 501px) and (max-width: 768px) {
   /* Estilos del cuerpo */
-    #contenedor1 , #cabeza{
-      width: 99%;
-    }
-    #cabeza #titulo h1{
-      font-size: 4.8em;
-      margin-top: -0.2em;
-      letter-spacing: -0.01em;
-    }
-    #cabeza #titulo h2{
-      font-size: 7.5em;
-      margin-top: -0.7em;
-      margin-left: 45%;
-      letter-spacing: -0.01em;
-    }
+  #contenedor1 , #cabeza{
+    width: 99%;
+  }
+  #cabeza #titulo h1{
+    font-size: 4.8em;
+    margin-top: -0.2em;
+    letter-spacing: -0.01em;
+  }
+  #cabeza #titulo h2{
+    font-size: 7.5em;
+    margin-top: -0.7em;
+    margin-left: 45%;
+    letter-spacing: -0.01em;
+  }
   /* Estilos del menu */
-    #menu{
-      width: 100%;
-      height: 5em;
-      margin-top: 5em;
-      margin-bottom: 1em;
-    }
-    #menu #inicio , #menu #tienda , #menu #catalogo , #menu #sala , #consultas{
-      width: 19.2%;
-    }
-    #menu #inicio p, #menu #tienda p, #menu #catalogo p, #menu #sala p , #menu #consultas p{
-      text-align: center;
-      padding-top: 0.4em;
-      font-size: 1.5em;
-    }
-    #menu #inicio{
-      margin-left: 0.5%;
-    }
-    #menu #tienda{
-      margin-left: 20.3%;
-    }
-    #menu #catalogo{
-      margin-left: 40.25%;
-    }
-    #menu #sala{
-      margin-left: 60.2%;
-    }
-    #menu #consultas{
-      margin-left: 80.1%;
-    }
+  #menu{
+    width: 100%;
+    height: 5em;
+    margin-top: 5em;
+    margin-bottom: 1em;
+  }
+  #menu #inicio , #menu #tienda , #menu #catalogo , #menu #sala , #consultas{
+    width: 19.2%;
+  }
+  #menu #inicio p, #menu #tienda p, #menu #catalogo p, #menu #sala p , #menu #consultas p{
+    text-align: center;
+    padding-top: 0.4em;
+    font-size: 1.5em;
+  }
+  #menu #inicio{
+    margin-left: 0.5%;
+  }
+  #menu #tienda{
+    margin-left: 20.3%;
+  }
+  #menu #catalogo{
+    margin-left: 40.25%;
+  }
+  #menu #sala{
+    margin-left: 60.2%;
+  }
+  #menu #consultas{
+    margin-left: 80.1%;
+  }
+  /* bordes de caja de toda la pagina */
+  #registroform , #consultasform, #contenedor1 #catalogocentral , #extendidaJuego{
+    border: 1px solid gray;
+    border-radius: 1em;
+    margin: 2em 0.5em 1em 0.5em;
+  }
+  /* Estilos del catalogo */
+  #contenedor1 #catalogocentral ul li{
+    width: 49%;
+    margin-left: 0.4%;
+  }
+  #catalogocentral #juego img{
+    width: 100%;
+    height: 15em;
+  }
+  #contenedor1 #catalogocentral p{
+    font-size: 1.4em;
+  }
+  /* Estilos de barra arriba */
+  #barraestado{
+    width: 100%;
+  }
+  #barraestado #login , #barraestado #twitter , #barraestado #fb , #barraestado #numero ,#barraestado #contacto{
+    width: 4%;
+  }
+  #barraestado p{
+    display: none;
+  }
+  #barraestado #contacto{
+    margin-left: 1%;
+  }
+  #barraestado #numero{
+    margin-left: 6.5%;
+  }
+  #barraestado #fb{
+    margin-left: 11.5%;
+  }
+  #barraestado #twitter{
+    margin-left: 15.5%;
+  }
+  #barraestado #login{
+    margin-left: 94%;
+  }
+  /* Estilos de juegos index */
+  #nuevos{
+    overflow: scroll;
+    margin-top: -32.6em;
+  }
+  #nuevos ul li{
+    width: 49%;
+  }
+  /*Espacio grande con un juego*/
+  #masvendido{
+    margin-left: 1%;
+    width: 45%;
+    max-width: 58em;
+    height: 32.6em;
+  }
+  #masvendido #fondo img, #masvendido #fondo{
+    width: 100%;
+    height: 26em;
+  }
+  #contenedor1 #relleno{
+    display: block;
+  }
 }
-@media only screen and (min-width: 751px) and (max-width: 1024px) {
+
+@media only screen and (min-width: 681px) and (max-width: 1023px) {
+  /* Estilos de juegos index */
+  #nuevos{
+    overflow: scroll;
+  }
+  #nuevos ul li{
+    width: 49%;
+  }
+  #masvendido #fondo img, #masvendido #fondo{
+    width: 100%;
+    height: 26em;
+  }
+  #contenedor1 #relleno{
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 680px) {
+/* Estilos de juegos index */
+#nuevos{
+  overflow: scroll;
+  width: 40%;
+  margin-left: 59%;
+  height: 26em;
+}
+#nuevos ul li{
+  width: 100%;
+}
+#masvendido{
+  width: 57%;
+}
+#masvendido #fondo img, #masvendido #fondo{
+  width: 100%;
+  height: 26em;
+}
+#contenedor1 #relleno{
+  display: none;
+}
+}
+
+  /*ESTILOS PARA TABLETS2 */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   /* Estilos del cuerpo */
-    #contenedor1 , #cabeza{
-      width: 97%;
-    }
+  #contenedor1 , #cabeza{
+    width: 97%;
+  }
+  #registroform , #consultasform, #contenedor1 #catalogocentral , #extendidaJuego{
+    border: 1px solid gray;
+    border-radius: 1em;
+    margin: 2em 0.5em 1em 0.5em;
+  }
+  /* Estilos del catalogo */
+  #contenedor1 #catalogocentral ul li{
+    width: 32%;
+    margin-left: 0.4%;
+  }
+  #catalogocentral #juego img{
+    width: 100%;
+    height: 15em;
+  }
+  #contenedor1 #catalogocentral p{
+    font-size: 1.4em;
+  }
 }
+
+  /*ESTILOS PARA NETBOOKS */
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
   /* Estilos del cuerpo */
-    #contenedor1 , #cabeza{
-      width: 95%;
-    }
+  #contenedor1 , #cabeza{
+    width: 95%;
+  }
+  #registroform , #consultasform, #contenedor1 #catalogocentral , #extendidaJuego{
+    border: 1px solid gray;
+    border-radius: 1em;
+    margin: 2em 0.7em 1em 0.7em;
+  }
+}
+  /*ARREGLOS PARA DISTINTAS RESOLUCIONES */
+@media only screen and (min-width: 1281px) and (max-width: 1600px) {
+  /* Estilos del cuerpo */
+  #contenedor1 , #cabeza{
+    width: 93%;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  #extendidaJuego #fotomenor ul li{
+    width: 32.6%;
+    margin-left: 0.1em;
+  }
 }
