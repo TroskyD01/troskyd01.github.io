@@ -611,10 +611,13 @@ a:visited {
   margin: 1%;
   border: 1px solid black;
   border-radius: 1em;
-
+}
+#contenedor1 #catalogocentral p{
+  font-size: 1.3em;
 }
 #contenedor1 #catalogocentral #titulo{
-  overflow: visible;}
+  overflow: visible;
+}
 #catalogocentral #juego img{
   width: 100%;
   height: 10em;
@@ -1324,6 +1327,9 @@ a:visited {
   }
   #extendidaJuego #valoracion img{
     margin-left: 37%;
+  }
+  #contenedor1 #catalogocentral p{
+    font-size: 1.2em;
   }
 }
   /*ARREGLOS PARA DISTINTAS RESOLUCIONES */
