@@ -456,7 +456,7 @@ body{
   height: 37em;
   margin-top: 1em;
   margin-left: 67%;
-  overflow: hidden;
+  overflow: scroll;
 }
 #extendidaJuego #caracteristicas table{
   font-family: calibri , verdana;
@@ -534,6 +534,9 @@ body{
   height: 5em;
   margin-top: -6em;
   float: left;
+}
+#extendidaJuego #comprar #botonComprar:hover{
+  background-color: rgba(235, 69, 65, 0.9);
 }
 #extendidaJuego #valoracion{
   margin-left: 1%;
@@ -996,7 +999,7 @@ a:visited {
     margin-left: 1%;
     width: 25%;
     height: auto;
-    margin-top: -3.5em;
+    margin-top: -3.8em;
     float: left;
   }
   #extendidaJuego #valoracion{
@@ -1167,6 +1170,47 @@ a:visited {
       width: 32.5%;
       margin-left: 0.1em;
     }
+    #extendidaJuego #valoracion img{
+      margin-left: 75%;
+      height: 4em;
+      margin-top: -5em;
+      width: 100%;
+    }
+    #extendidaJuego #botonComprar{
+      margin-left: 60%;
+      margin-top: -6.5em;
+      height: 6.5em;
+      width: 39%;
+    }
+    #extendidaJuego #botonComprar p{
+      margin-left: 15%;
+      font-size: 2em;
+      line-height: 1.4em;
+    }
+    #extendidaJuego #botonComprar img{
+      margin-left: 1%;
+      width: 23%;
+      height: auto;
+      margin-top: -4em;
+    }
+    #extendidaJuego #fotomayor{
+      height: 25em;
+    }
+    #extendidaJuego #fotomayor video , #extendidaJuego #fotomayor img{
+            height: 25em;
+    }
+    #extendidaJuego #caracteristicas{
+      height: 31em;
+      font-size: 0.9em;
+    }
+    #extendidaJuego #portada{
+      height: 14em;
+      margin-top: -25em;
+    }
+    #extendidaJuego #portada img{
+      width: 100%;
+      height: inherit;
+    }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 680px) {
@@ -1227,6 +1271,9 @@ a:visited {
     width: 32.5%;
     margin-left: 0.1em;
   }
+  #extendidaJuego #valoracion img{
+    margin-left: 60%;
+  }
 }
 
   /*ESTILOS PARA TABLETS2 */
@@ -1259,6 +1306,9 @@ a:visited {
   #extendidaJuego #fotomenor ul{
     width: 150%;
   }
+  #extendidaJuego #valoracion img{
+    margin-left: 40%;
+  }
 }
 
   /*ESTILOS PARA NETBOOKS */
@@ -1271,6 +1321,9 @@ a:visited {
     border: 1px solid gray;
     border-radius: 1em;
     margin: 2em 0.7em 1em 0.7em;
+  }
+  #extendidaJuego #valoracion img{
+    margin-left: 37%;
   }
 }
   /*ARREGLOS PARA DISTINTAS RESOLUCIONES */
