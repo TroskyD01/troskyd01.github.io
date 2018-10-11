@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/main.css">
     <link rel="shortcut icon" href="imagenes/favicon.ico">
-    <title>Tienda Juegos - DiRT4</title>
+    <title>Tienda Juegos - Sniper Elite 4</title>
   </head>
   <body>
 
@@ -72,34 +72,33 @@
       <div id="extendidaJuego">
 
         <div id="titulo">
-          <span>DiRT4</span>
+          <span id="titulo-juego"></span>
         </div>
 
         <div id="fotomayor">
           <video controls>
-          <source src="https://steamcdn-a.akamaihd.net/steam/apps/256686814/movie480.webm?t=1497005194" type="video/mp4">
+          <source src="https://steamcdn-a.akamaihd.net/steam/apps/256685831/movie480.webm?t=1495803823" type="video/mp4">
           </video>
 
         </div>
 
-        <div id="portada"><img src="imagenes/juegos/dirt/portada.png" alt="DiRT4 Imagen">  </div>
+        <div id="portada"><img id="portada-juego" src="imagenes/relleno.png" alt="Imagen">  </div>
         <div id="caracteristicas">
           <table>
             <tr>
-              <th colspan="2">¡La serie líder de carreras todoterreno ha vuelto! DiRT 4 te pone al volante de los coches más potentes para hacer carreras de rally, rallycross y landrush en los caminos más duros del mundo. Your Stage es el sistema del juego que te permite crear millones de rutas con solo tocar un botón.
-              </th>
+              <th colspan="2" id="descripcion-juego"></th>
             </tr>
             <tr>
               <td>Fecha de Lanzamiento</td>
-              <td>9 JUN 2017</td>
+              <td id="lanzamiento-juego"></td>
             </tr>
             <tr>
               <td>Desarrollador</td>
-              <td>Codemasters</td>
+              <td id="desarrollador-juego"></td>
             </tr>
             <tr>
               <td>Categoria</td>
-              <td>Carreras , Simulador</td>
+              <td id="categoria-juego"></td>
             </tr>
           </table>
         </div>
@@ -107,28 +106,29 @@
         <div id="fotomenor">
           <ul>
             <li>
-              <img id="img1" src="imagenes/juegos/dirt/foto1.png" alt="Dirt4 Imagen">
+              <img id="img1" src="imagenes/relleno.png" alt="Imagen">
             </li>
             <li>
-              <img id="img2" src="imagenes/juegos/dirt/foto2.png" alt="Dirt4 Imagen">
+              <img id="img2" src="imagenes/relleno.png" alt="Imagen">
             </li>
             <li>
-              <img id="img3" src="imagenes/juegos/dirt/foto3.png" alt="Dirt4 Imagen">
+              <img id="img3" src="imagenes/relleno.png" alt="Imagen">
             </li>
           </ul>
         </div>
 
+
         <div id="comprar">
 
-          <p id="nombreComprar">DiRT4</p>
+          <p id="nombreComprar"></p>
 
           <div id="valoracion">
             <p>Valoracion:</p>
-            <img id="valoracion-juego" src="imagenes/estrellas3.png" alt="3 estrellas">
+            <img id="valoracion-juego" src="imagenes/relleno.png">
           </div>
           <div id="botonComprar">
             <p>Comprar</p>
-            <p>$39.99</p>
+            <p id="precio-juego"></p>
             <img id="carro" src="imagenes/carro.png" alt="Carro de Compras">
           </div>
 
@@ -141,14 +141,13 @@
 
     </div>
 
-    </div>
-
     <div id="separador">
     </div>
 
     <div id="marca">
       <p>© Diego Pereyra - JaP 2018</p>
     </div>
-
+      <script src="scripts/script.js"></script>
     </body>
+
 </html>
