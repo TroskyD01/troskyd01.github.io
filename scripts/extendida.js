@@ -35,10 +35,17 @@ document.addEventListener("DOMContentLoaded", function(){
   document.getElementById("img2").src= arrJuegos[i].mini2;
   document.getElementById("img3").src= arrJuegos[i].mini3;
 
-  var campoCosto = document.getElementById("costo-juego");
+  var ImgOvid = document.getElementById("fotomayor");
+  if (arrJuegos[i].video!=0) {
+    ImgOvid.innerHTML = ImgOvid.innerHTML + "<video controls><source src=" + arrJuegos[i].video + "type='video/mp4'></video>";
+  }else {
+    ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + arrJuegos[i].fotomayor + " alt='" + arrJuegos[i].nombre + " Imagen Mayor'>";
+  };
+
+/*  var campoCosto = document.getElementById("costo-juego");
   var campoCostoFinal = document.getElementById("costo-final-juego");
 
-/*  campoCosto.addEventListener("keyup", function(){
+  campoCosto.addEventListener("keyup", function(){
     var valorActual = campoCosto.value;
     campoCostoFinal.value = valorActual * 1.22;
   });*/
