@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   arrJuegos = JSON.parse(arrJuegos);
+//obtener id de juego desde el url cargado del catalogo dinamico
   var url = document.URL;
   var idJuego = url.match(/id=(\d+)/)[1];
   var i = idJuego;
-
+//cargar los datos del juego a la pagina
   var elementHTMLNombre = document.getElementById("titulo-juego");
   elementHTMLNombre.innerHTML = arrJuegos[i].nombre;
 
@@ -29,12 +30,47 @@ document.addEventListener("DOMContentLoaded", function(){
   var elementHTMLCategoria = document.getElementById("categoria-juego");
   elementHTMLCategoria.innerHTML = arrJuegos[i].categoria;
 
+  var elementHTMLPrecioVentana = document.getElementById("precioVentanaCompra");
+  elementHTMLPrecioVentana.innerHTML = "Precio: " + arrJuegos[i].precio;
+
+  var elementHTMLNombreVentana = document.getElementById("nombreVentanaCompra");
+  elementHTMLNombreVentana.innerHTML = arrJuegos[i].nombre;
+
+  var elementHTMLNombreVentana = document.getElementById("Iva");
+  elementHTMLNombreVentana.innerHTML = "IVA: %" + 22;
+
+  var precio = parseFloat(arrJuegos[i].precio.replace(/[^0-9\.]/g, ''), 10); //convertir el string precio a numeros para hacer calculo de iva
+  var costoTotal = "Costo Total: $" + precio * 1.22;
+
+//Abrir Ventana
+  var elementHTMLCostoTotalVentana = document.getElementById("CostoTotal");
+  elementHTMLCostoTotalVentana.innerHTML = costoTotal;
+
+  var elemntHTMLAbrirVentana = document.getElementById("botonComprar");
+
+  elemntHTMLAbrirVentana.addEventListener("click", function(){
+
+    var VentanaComprar = document.getElementById("ventanaCompra");
+    VentanaComprar.style.display = "block";
+  });
+//Cerrar Ventana
+  var elemntHTMLCerrarVentana = document.getElementById("cancelarCompra");
+
+  elemntHTMLCerrarVentana.addEventListener("click", function(){
+
+    var VentanaComprar = document.getElementById("ventanaCompra");
+    VentanaComprar.style.display = "none";
+  });
+
+//cargar link de imagenes desde el array
   document.getElementById("valoracion-juego").src= arrJuegos[i].valoracion;
   document.getElementById("portada-juego").src= arrJuegos[i].portada;
+  document.getElementById("ventanaPortada").src= arrJuegos[i].portada;
   document.getElementById("img1").src= arrJuegos[i].mini1;
   document.getElementById("img2").src= arrJuegos[i].mini2;
   document.getElementById("img3").src= arrJuegos[i].mini3;
 
+//cargar video principal o imagen principal segun los datos del array
   var ImgOvid = document.getElementById("fotomayor");
   if (arrJuegos[i].video!=0) {
     ImgOvid.innerHTML = ImgOvid.innerHTML + "<video controls><source src=" + arrJuegos[i].video + "type='video/mp4'></video>";
@@ -42,11 +78,4 @@ document.addEventListener("DOMContentLoaded", function(){
     ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + arrJuegos[i].fotomayor + " alt='" + arrJuegos[i].nombre + " Imagen Mayor'>";
   };
 
-/*  var campoCosto = document.getElementById("costo-juego");
-  var campoCostoFinal = document.getElementById("costo-final-juego");
-
-  campoCosto.addEventListener("keyup", function(){
-    var valorActual = campoCosto.value;
-    campoCostoFinal.value = valorActual * 1.22;
-  });*/
 });

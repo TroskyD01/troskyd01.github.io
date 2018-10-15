@@ -690,7 +690,7 @@ a:visited {
   overflow: hidden;
 }
 /* sombras de toda la pagina */
-#extendidaJuego #fotomayor , #extendidaJuego #caracteristicas , #extendidaJuego #portada ,#extendidaJuego #fotomenor img , #extendidaJuego #comprar , #masvendido #fondo img {
+#extendidaJuego #fotomayor , #extendidaJuego #caracteristicas , #extendidaJuego #portada ,#extendidaJuego #fotomenor img , #extendidaJuego #comprar , #masvendido #fondo img , #ventanaCompra{
   -webkit-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
   -moz-box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
   box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.75);
@@ -711,7 +711,67 @@ a:visited {
   margin-left: 1%;
   display: none;
 }
-
+/*Estilo de la ventana de compra de juego*/
+#ventanaCompra{
+  height: 36em;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: -60em;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 2;
+  display: none;
+}
+#ventanaCompra #ventanaPortada{
+  height: 12em;
+  width: 40%;
+  margin: 1em;
+  margin-left: 2%;
+}
+#ventanaCompra #finalizarCompra , #ventanaCompra #cancelarCompra {
+  background-color: rgba(255, 69, 65, 1);
+  background-image: url(../imagenes/textura3.png);
+  border-radius: 0.45em;
+  width: 42.5%;
+  height: 4em;
+}
+#ventanaCompra #cancelarCompra {
+  margin-left: 5%;
+  margin-top: -4em;
+}
+#ventanaCompra #finalizarCompra {
+  margin-left: 52.5%;
+  margin-top: 3em;
+}
+#ventanaCompra p{
+  margin-left: 2%;
+  font-size: 1.8em;
+  line-height: 1.7em;
+}
+#ventanaCompra #finalizarCompra p , #ventanaCompra #cancelarCompra p {
+  margin-left: 1%;
+  font-size: 2em;
+  text-align: center;
+  color: rgba(200, 200, 200, 1);
+  line-height: 1.8em;
+}
+#ventanaCompra #finalizarCompra img , #ventanaCompra #cancelarCompra img {
+  margin-left: 1%;
+  width: 15%;
+  height: 3em;
+  margin-top: -3.0em;
+  float: left;
+}
+#ventanaCompra #cancelarCompra img {
+  margin-top: -3.2em;
+}
+#ventanaCompra #cancelarCompra:hover , #ventanaCompra #finalizarCompra:hover{
+  background-color: rgba(235, 69, 65, 0.9);
+}
+#ventanaCompra #finalizarCompra , #ventanaCompra #cancelarCompra , #extendidaJuego #botonComprar{
+  cursor: pointer;
+}
   /*ESTILOS PARA CELULARES */
 @media only screen and (max-width : 500px){
 /* Estilos del catalogo */
