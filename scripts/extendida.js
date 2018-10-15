@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
   elementHTMLCategoria.innerHTML = arrJuegos[i].categoria;
 
   var elementHTMLPrecioVentana = document.getElementById("precioVentanaCompra");
-  elementHTMLPrecioVentana.innerHTML = "Precio: " + arrJuegos[i].precio;
+  elementHTMLPrecioVentana.innerHTML = "Precio: $" + arrJuegos[i].precio;
 
   var elementHTMLNombreVentana = document.getElementById("nombreVentanaCompra");
   elementHTMLNombreVentana.innerHTML = arrJuegos[i].nombre;
@@ -40,11 +40,10 @@ document.addEventListener("DOMContentLoaded", function(){
   elementHTMLNombreVentana.innerHTML = "IVA: %" + 22;
 
   var precio = parseFloat(arrJuegos[i].precio.replace(/[^0-9\.]/g, ''), 10); //convertir el string precio a numeros para hacer calculo de iva
-  var costoTotal = "Costo Total: $" + precio * 1.22;
-
+  var costoTotal = precio * 1.22;
 //Abrir Ventana
   var elementHTMLCostoTotalVentana = document.getElementById("CostoTotal");
-  elementHTMLCostoTotalVentana.innerHTML = costoTotal;
+  elementHTMLCostoTotalVentana.innerHTML = "Costo Total: $" + costoTotal.toFixed(2);
 
   var elemntHTMLAbrirVentana = document.getElementById("botonComprar");
 
