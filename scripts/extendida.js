@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function(){
   elementHTMLCategoria.innerHTML = arrJuegos[i].categoria;
 
   var elementHTMLPrecioVentana = document.getElementById("precioVentanaCompra");
-  elementHTMLPrecioVentana.innerHTML = "Precio: $" + arrJuegos[i].precio;
+  elementHTMLPrecioVentana.innerHTML = "Precio: " + arrJuegos[i].precio;
 
   var elementHTMLNombreVentana = document.getElementById("nombreVentanaCompra");
   elementHTMLNombreVentana.innerHTML = arrJuegos[i].nombre;
