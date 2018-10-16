@@ -8,9 +8,4 @@ document.addEventListener("DOMContentLoaded", function(){
     arrJuegos[i].id = i;
     listaJuegos.innerHTML = listaJuegos.innerHTML + "<li><a href='" + arrJuegos[i].url+ "?id=" +arrJuegos[i].id +"'>" + "<div class='juego'>" + "<img id='icono' src ='" + arrJuegos[i].miniatura + "'>" + "<p>" + arrJuegos[i].nombre + "</p><p>Precio: " + arrJuegos[i].precio + "</p><p>Categoria: " + arrJuegos[i].categoria + "</p></div></a></li>";
   };
-
-  /*  campoCosto.addEventListener("keyup", function(){
-    var valorActual = campoCosto.value;
-    campoCostoFinal.value = valorActual * 1.22;
-  });*/
 });

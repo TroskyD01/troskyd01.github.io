@@ -135,6 +135,7 @@
             <p id="nombreVentanaCompra"></p>
             <p id="precioVentanaCompra"></p>
             <p id="Iva"></p>
+            <p id="costoEnvio"></p>
             <p id="CostoTotal"></p>
             <div id="finalizarCompra">
               <p>Comprar</p>
@@ -143,6 +144,22 @@
             <div id="cancelarCompra">
               <p>Cancelar</p>
               <img src="imagenes/x.png" alt="x para cerrar">
+            </div>
+            <div id="envio">
+              <span id="titulo">Seleccionar forma de envio:</span>
+              <form id="tipoEnvio">
+                <input type="radio" name="tipoEnvio" id="digital" checked><p>Digital (Sin Costo Adicional)</p>
+                <input type="radio" name="tipoEnvio" id="fisicoinput" ><p>Fisico (Costo Adicional)</p>
+              </form>
+              <form id="fisicoForm">
+                <input type="radio" name="tipoEnvioFisico" id="comun" checked><p>Común (%0.5 Sobre el precio)</p>
+                <input type="radio" name="tipoEnvioFisico" id="especial"><p>Especial (%2 Sobre el precio)</p>
+                <input type="radio" name="tipoEnvioFisico" id="premium"><p>Premium (%5 Sobre el precio)</p>
+              </form>
+            </div>
+            <div id="cantidad">
+              <label for="cantidad"><p>Cantidad</p></label>
+              <input type="text" id="cantidadJuegos" name="cantidad" value="1" required>
             </div>
           </div>
 

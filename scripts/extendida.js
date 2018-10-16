@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(){
 
   arrJuegos = JSON.parse(arrJuegos);
-//obtener id de juego desde el url cargado del catalogo dinamico
+//Obtener id de juego desde el url cargado del catalogo dinamico
   var url = document.URL;
   var idJuego = url.match(/id=(\d+)/)[1];
   var i = idJuego;
-//cargar los datos del juego a la pagina
+//Cargar los datos del juego a la pagina
   var elementHTMLNombre = document.getElementById("titulo-juego");
   elementHTMLNombre.innerHTML = arrJuegos[i].nombre;
 
@@ -30,38 +30,114 @@ document.addEventListener("DOMContentLoaded", function(){
   var elementHTMLCategoria = document.getElementById("categoria-juego");
   elementHTMLCategoria.innerHTML = arrJuegos[i].categoria;
 
+  var elementHTMLCantidadVentana = document.getElementById("cantidadJuegos");
+  elementHTMLCantidadVentana.setAttribute("value", 1);
+
+//variables de precios y envios
+  var Precio = parseFloat(arrJuegos[i].precio.replace(/[^0-9\.]/g, ''), 10); //convertir el string precio a numeros para hacer calculo de iva
+  var PrecioConIva = Precio * 1.22;
+  var Iva = Precio * 0.22;
+  var Envio = 0;
+  var CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+
+  CostoTotal = CostoTotal.toFixed(2);
+
   var elementHTMLPrecioVentana = document.getElementById("precioVentanaCompra");
-  elementHTMLPrecioVentana.innerHTML = "Precio: " + arrJuegos[i].precio;
+  elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
 
   var elementHTMLNombreVentana = document.getElementById("nombreVentanaCompra");
   elementHTMLNombreVentana.innerHTML = arrJuegos[i].nombre;
 
-  var elementHTMLNombreVentana = document.getElementById("Iva");
-  elementHTMLNombreVentana.innerHTML = "IVA: %" + 22;
+  var elementHTMLEnvioVentana = document.getElementById("costoEnvio");
+  elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
 
-  var precio = parseFloat(arrJuegos[i].precio.replace(/[^0-9\.]/g, ''), 10); //convertir el string precio a numeros para hacer calculo de iva
-  var costoTotal = precio * 1.22;
+  var elementHTMLIvaVentana = document.getElementById("Iva");
+  elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
+
 //Abrir Ventana
+  Envio = 0;
   var elementHTMLCostoTotalVentana = document.getElementById("CostoTotal");
-  elementHTMLCostoTotalVentana.innerHTML = "Costo Total: $" + costoTotal.toFixed(2);
+  elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal;
 
   var elemntHTMLAbrirVentana = document.getElementById("botonComprar");
-
   elemntHTMLAbrirVentana.addEventListener("click", function(){
 
     var VentanaComprar = document.getElementById("ventanaCompra");
     VentanaComprar.style.display = "block";
   });
+
 //Cerrar Ventana
-  var elemntHTMLCerrarVentana = document.getElementById("cancelarCompra");
+    var elemntHTMLCerrarVentana = document.getElementById("cancelarCompra");
+    elemntHTMLCerrarVentana.addEventListener("click", function(){
 
-  elemntHTMLCerrarVentana.addEventListener("click", function(){
+      //Poner los valores al default cuando se cancela
+      var VentanaComprar = document.getElementById("ventanaCompra");
+      VentanaComprar.style.display = "none";
+      document.getElementById('comun').checked = true;
+      document.getElementById('digital').checked = true;
+      FormEnvioFisico.style.display = "none";
+      elementHTMLCantidadVentana.value = 1;
+      PrecioConIva = Precio * 1.22;
+      Iva = Precio * 0.22;
+      Envio = 0;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
+      elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
+    });
 
-    var VentanaComprar = document.getElementById("ventanaCompra");
-    VentanaComprar.style.display = "none";
+//Mostrar envios fisicos segun si esta selecionado en el form
+  var FormEnvioFisico = document.getElementById("fisicoForm");
+  var FormTipoEnvio = document.getElementById("tipoEnvio");
+  FormTipoEnvio.addEventListener("click", function(){
+
+    if (document.getElementById('digital').checked == true) {
+      FormEnvioFisico.style.display = "none";
+      Envio = 0;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
+    }else {
+      FormEnvioFisico.style.display = "block";
+//Agregar costo de envio fisico por defecto (%0.5)
+      Envio = PrecioConIva * 0.05;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      document.getElementById('comun').checked = true;
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (PrecioConIva * 0.05).toFixed(2);
+    };
   });
 
-//cargar link de imagenes desde el array
+//Agregar costo al precio total segun envio fisico selecionado
+  FormEnvioFisico.addEventListener("click", function(){
+    if (document.getElementById('comun').checked == true) {
+      Envio = PrecioConIva * 0.05;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (PrecioConIva * 0.05).toFixed(2);
+    }else if(document.getElementById('especial').checked == true){
+      Envio = PrecioConIva * 0.2;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (PrecioConIva * 0.2).toFixed(2);
+    }else{
+      Envio = PrecioConIva * 0.5;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (PrecioConIva * 0.5).toFixed(2);
+    }
+  });
+
+//Agregar costo al precio total segun cantidad selecionada
+  elementHTMLCantidadVentana.addEventListener("keyup", function(){
+  CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+  elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $"+ (PrecioConIva * elementHTMLCantidadVentana.value).toFixed(2);
+  elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
+  elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + (Iva * elementHTMLCantidadVentana.value).toFixed(2);
+  elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+  });
+
+//Cargar link de imagenes desde el array
   document.getElementById("valoracion-juego").src= arrJuegos[i].valoracion;
   document.getElementById("portada-juego").src= arrJuegos[i].portada;
   document.getElementById("ventanaPortada").src= arrJuegos[i].portada;
