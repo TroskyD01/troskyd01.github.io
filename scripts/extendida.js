@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function(){
       elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
       elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
       elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
+      elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
     });
 
 //Mostrar envios fisicos segun si esta selecionado en el form
@@ -100,31 +101,31 @@ document.addEventListener("DOMContentLoaded", function(){
     }else {
       FormEnvioFisico.style.display = "block";
 //Agregar costo de envio fisico por defecto (%0.5)
-      Envio = PrecioConIva * 0.05;
+      Envio = PrecioConIva * 0.005;
       CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
       elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
       document.getElementById('comun').checked = true;
-      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (PrecioConIva * 0.05).toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
     };
   });
 
 //Agregar costo al precio total segun envio fisico selecionado
   FormEnvioFisico.addEventListener("click", function(){
     if (document.getElementById('comun').checked == true) {
+      Envio = PrecioConIva * 0.005;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
+    }else if(document.getElementById('especial').checked == true){
+      Envio = PrecioConIva * 0.02;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
+    }else{
       Envio = PrecioConIva * 0.05;
       CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
       elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
-      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (PrecioConIva * 0.05).toFixed(2);
-    }else if(document.getElementById('especial').checked == true){
-      Envio = PrecioConIva * 0.2;
-      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
-      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
-      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (PrecioConIva * 0.2).toFixed(2);
-    }else{
-      Envio = PrecioConIva * 0.5;
-      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
-      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
-      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (PrecioConIva * 0.5).toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
     }
   });
 
@@ -141,16 +142,60 @@ document.addEventListener("DOMContentLoaded", function(){
   document.getElementById("valoracion-juego").src= arrJuegos[i].valoracion;
   document.getElementById("portada-juego").src= arrJuegos[i].portada;
   document.getElementById("ventanaPortada").src= arrJuegos[i].portada;
-  document.getElementById("img1").src= arrJuegos[i].mini1;
-  document.getElementById("img2").src= arrJuegos[i].mini2;
-  document.getElementById("img3").src= arrJuegos[i].mini3;
+  var GaleriaIMG1 = document.getElementById("img1");
+  var GaleriaIMG2 = document.getElementById("img2");
+  var GaleriaIMG3 = document.getElementById("img3");
 
-//cargar video principal o imagen principal segun los datos del array
+  GaleriaIMG1.src= arrJuegos[i].mini1;
+  GaleriaIMG2.src= arrJuegos[i].mini2;
+  GaleriaIMG3.src= arrJuegos[i].mini3;
+
+//Cargar video principal o imagen principal segun los datos del array
   var ImgOvid = document.getElementById("fotomayor");
   if (arrJuegos[i].video!=0) {
     ImgOvid.innerHTML = ImgOvid.innerHTML + "<video controls><source src=" + arrJuegos[i].video + "type='video/mp4'></video>";
+
   }else {
     ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + arrJuegos[i].fotomayor + " alt='" + arrJuegos[i].nombre + " Imagen Mayor'>";
   };
+  
+//Agrandar imagenes pequeñas al hacerles click
+  var elemntHTMLGaleria = [GaleriaIMG1 , GaleriaIMG2 , GaleriaIMG3];
+  var GaleriaX = document.getElementById("xx");
 
+    elemntHTMLGaleria[0].addEventListener("click", function(){
+
+      GaleriaX.style.zIndex = "1";
+      ImgOvid.innerHTML = "";
+      ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + elemntHTMLGaleria[0].src + ">";
+
+    });
+  //
+  elemntHTMLGaleria[1].addEventListener("click", function(){
+
+    GaleriaX.style.zIndex = "1";
+    ImgOvid.innerHTML = "";
+    ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + elemntHTMLGaleria[1].src + ">";
+
+  });
+//
+  elemntHTMLGaleria[2].addEventListener("click", function(){
+
+    GaleriaX.style.zIndex = "1";
+    ImgOvid.innerHTML = "";
+    ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + elemntHTMLGaleria[2].src + ">";
+
+  });
+//
+  var GaleriaX = document.getElementById("xx");
+  GaleriaX.addEventListener("click", function(){
+
+    GaleriaX.style.zIndex = "-1";
+    ImgOvid.innerHTML = "";
+    if (arrJuegos[i].video!=0) {
+      ImgOvid.innerHTML = ImgOvid.innerHTML + "<video controls><source src=" + arrJuegos[i].video + "type='video/mp4'></video>";
+    }else {
+      ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + arrJuegos[i].fotomayor + " alt='" + arrJuegos[i].nombre + " Imagen Mayor'>";
+    };
+  });
 });

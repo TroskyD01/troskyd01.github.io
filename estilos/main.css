@@ -558,6 +558,15 @@ body{
   margin-left: 1%;
   font-size: 2em;
 }
+#extendidaJuego #portada #xx{
+  float: left;
+  width: 12%;
+  height: 4em;
+  margin-left: -20%;
+  margin-top: -19em;
+  position: relative;
+  z-index: -1;
+}
 /* Estilos de los link */
 a:link {
     text-decoration: none;
