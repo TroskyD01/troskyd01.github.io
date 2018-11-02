@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function(){
       document.getElementById('comun').checked = true;
       document.getElementById('digital').checked = true;
       FormEnvioFisico.style.display = "none";
+      Direccion.style.display = "none";
       elementHTMLCantidadVentana.value = 1;
       PrecioConIva = Precio * 1.22;
       Iva = Precio * 0.22;
@@ -87,19 +88,43 @@ document.addEventListener("DOMContentLoaded", function(){
       elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
     });
 
+//Finalizar compra
+  var elemntHTMLFinalizarCompra = document.getElementById("finalizarCompra");
+  elemntHTMLFinalizarCompra.addEventListener("click", function(){
+  var DireccionTextArea = document.getElementById("direccionText");
+  var VentanaComprar = document.getElementById("ventanaCompra");
+
+    if (document.getElementById('digital').checked == true) {
+      alert("Finalizado con Exito");    
+      VentanaComprar.style.display = "none";
+    }
+    else {
+      if (DireccionTextArea.value != '') {
+        alert("Finalizado con Exito");
+        VentanaComprar.style.display = "none";
+      }
+      else {
+        alert("Debe ingresar una direccion");
+      }
+    };
+});
+
 //Mostrar envios fisicos segun si esta selecionado en el form
   var FormEnvioFisico = document.getElementById("fisicoForm");
   var FormTipoEnvio = document.getElementById("tipoEnvio");
+  var Direccion = document.getElementById("direccion");
   FormTipoEnvio.addEventListener("click", function(){
 
     if (document.getElementById('digital').checked == true) {
       FormEnvioFisico.style.display = "none";
+      Direccion.style.display = "none";
       Envio = 0;
       CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
       elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
       elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
     }else {
       FormEnvioFisico.style.display = "block";
+      Direccion.style.display = "block";
 //Agregar costo de envio fisico por defecto (%0.5)
       Envio = PrecioConIva * 0.005;
       CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
@@ -158,18 +183,18 @@ document.addEventListener("DOMContentLoaded", function(){
   }else {
     ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + arrJuegos[i].fotomayor + " alt='" + arrJuegos[i].nombre + " Imagen Mayor'>";
   };
-  
+
 //Agrandar imagenes pequeñas al hacerles click
   var elemntHTMLGaleria = [GaleriaIMG1 , GaleriaIMG2 , GaleriaIMG3];
   var GaleriaX = document.getElementById("xx");
 
-    elemntHTMLGaleria[0].addEventListener("click", function(){
+  elemntHTMLGaleria[0].addEventListener("click", function(){
 
-      GaleriaX.style.zIndex = "1";
-      ImgOvid.innerHTML = "";
-      ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + elemntHTMLGaleria[0].src + ">";
+    GaleriaX.style.zIndex = "1";
+    ImgOvid.innerHTML = "";
+    ImgOvid.innerHTML = ImgOvid.innerHTML + "<img src=" + elemntHTMLGaleria[0].src + ">";
 
-    });
+  });
   //
   elemntHTMLGaleria[1].addEventListener("click", function(){
 
