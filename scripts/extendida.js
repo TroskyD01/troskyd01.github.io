@@ -95,16 +95,16 @@ document.addEventListener("DOMContentLoaded", function(){
   var VentanaComprar = document.getElementById("ventanaCompra");
 
     if (document.getElementById('digital').checked == true) {
-      alert("Finalizado con Exito");    
+      alert("Finalizado con éxito! , Gracias por su compra");
       VentanaComprar.style.display = "none";
     }
     else {
       if (DireccionTextArea.value != '') {
-        alert("Finalizado con Exito");
+        alert("Finalizado con éxito! , Gracias por su compra");
         VentanaComprar.style.display = "none";
       }
       else {
-        alert("Debe ingresar una direccion");
+        alert("ERROR: Debe ingresar una dirección.");
       }
     };
 });

@@ -1208,6 +1208,10 @@ a:visited {
     margin-left: 189%;
     margin-top: -41em;
   }
+  /* Estilos del apartado de direccion envio*/
+  #ventanaCompra #direccion{
+    margin-top: 13em;
+  }
 }
 
   /*ESTILOS PARA TABLETS */
@@ -1450,6 +1454,10 @@ a:visited {
     margin-left: -20%;
     margin-top: -14em;
   }
+  /* Estilos del apartado de direccion envio*/
+  #ventanaCompra #direccion{
+    margin-top: 19em;
+  }
 }
 
 @media only screen and (min-width: 501px) and (max-width: 680px) {
@@ -1489,6 +1497,10 @@ a:visited {
       margin-right: 0.5em;
       width: 25%;
       max-width: 20em;
+    }
+    /* Estilos del apartado de direccion envio*/
+    #ventanaCompra #direccion{
+      margin-top: 19em;
     }
 }
 @media only screen and (min-width: 681px) and (max-width: 1023px) {
@@ -1552,7 +1564,7 @@ a:visited {
     height: 33em;
     width: 70%;
     margin-left: 15%;
-    margin-top: -55em;
+    margin-top: -60em;
   }
   #ventanaCompra #ventanaPortada{
     height: 10em;
@@ -1592,13 +1604,16 @@ a:visited {
   #ventanaCompra #finalizarCompra {
     margin-left: 50.5%;
     margin-top: 6em;
-
   }
   #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
     width: 46%;
   }
   #ventanaCompra #finalizarCompra img , #ventanaCompra #cancelarCompra img {
     width: 20%;
+  }
+  /* Estilos del apartado de direccion envio*/
+  #ventanaCompra #direccion{
+    margin-top: 19em;
   }
 }
 
@@ -1618,6 +1633,37 @@ a:visited {
   }
   #contenedor1 #catalogocentral p{
     font-size: 1.2em;
+  }
+  /* Estilos del apartado de direccion envio*/
+  #ventanaCompra #direccion{
+    margin-top: 19em;
+  }
+  /* estilos de ventana de compra */
+  #ventanaCompra{
+    height: 34em;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: -60em;
+  }
+  #ventanaCompra p ,   #ventanaCompra #envio p , #ventanaCompra #envio #titulo{
+    font-size: 1.8em;
+  }
+  #ventanaCompra #envio p{
+    margin-left: 8%;
+  }
+  #ventanaCompra #cantidad{
+    width: 20%;
+    left: 4.8%;
+    height: 3em;
+    position: fixed;
+    top: 38.5em;
+    z-index: 3;
+  }
+  #ventanaCompra #cantidad #cantidadJuegos{
+    width: 12%;
+    height: 1.5em;
+    position: relative;
+    margin-left: 80%;
   }
 }
   /*ARREGLOS PARA DISTINTAS RESOLUCIONES */
