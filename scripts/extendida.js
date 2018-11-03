@@ -97,11 +97,45 @@ document.addEventListener("DOMContentLoaded", function(){
     if (document.getElementById('digital').checked == true) {
       alert("Finalizado con éxito! , Gracias por su compra");
       VentanaComprar.style.display = "none";
+    //Poner los valores al default cuando se finaliza
+      var VentanaComprar = document.getElementById("ventanaCompra");
+      VentanaComprar.style.display = "none";
+      document.getElementById('comun').checked = true;
+      document.getElementById('digital').checked = true;
+      FormEnvioFisico.style.display = "none";
+      Direccion.style.display = "none";
+      elementHTMLCantidadVentana.value = 1;
+      PrecioConIva = Precio * 1.22;
+      Iva = Precio * 0.22;
+      Envio = 0;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
+      elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
+      elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
+      DireccionTextArea.value = '';
     }
     else {
       if (DireccionTextArea.value != '') {
         alert("Finalizado con éxito! , Gracias por su compra");
         VentanaComprar.style.display = "none";
+      //Poner los valores al default cuando se finaliza
+        var VentanaComprar = document.getElementById("ventanaCompra");
+        VentanaComprar.style.display = "none";
+        document.getElementById('comun').checked = true;
+        document.getElementById('digital').checked = true;
+        FormEnvioFisico.style.display = "none";
+        Direccion.style.display = "none";
+        elementHTMLCantidadVentana.value = 1;
+        PrecioConIva = Precio * 1.22;
+        Iva = Precio * 0.22;
+        Envio = 0;
+        CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+        elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+        elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
+        elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
+        elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
+        DireccionTextArea.value = '';
       }
       else {
         alert("ERROR: Debe ingresar una dirección.");
