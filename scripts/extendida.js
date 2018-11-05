@@ -42,17 +42,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
   CostoTotal = CostoTotal.toFixed(2);
 
-  var elementHTMLPrecioVentana = document.getElementById("precioVentanaCompra");
-  elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
+  //elementHTMLCantidadVentana.addEventListener("change", function(){
+    var elementHTMLPrecioVentana = document.getElementById("precioVentanaCompra");
+    elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
 
-  var elementHTMLNombreVentana = document.getElementById("nombreVentanaCompra");
-  elementHTMLNombreVentana.innerHTML = arrJuegos[i].nombre;
+    var elementHTMLNombreVentana = document.getElementById("nombreVentanaCompra");
+    elementHTMLNombreVentana.innerHTML = arrJuegos[i].nombre;
 
-  var elementHTMLEnvioVentana = document.getElementById("costoEnvio");
-  elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
+    var elementHTMLEnvioVentana = document.getElementById("costoEnvio");
+    elementHTMLEnvioVentana.innerHTML = "Envio: $0.00";
 
-  var elementHTMLIvaVentana = document.getElementById("Iva");
-  elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
+    var elementHTMLIvaVentana = document.getElementById("Iva");
+    elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
+
+  //});
+
 
 //Abrir Ventana
   Envio = 0;
@@ -189,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 //Agregar costo al precio total segun cantidad selecionada
-  elementHTMLCantidadVentana.addEventListener("keyup", function(){
+  elementHTMLCantidadVentana.addEventListener("change", function(){
   CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
   elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $"+ (PrecioConIva * elementHTMLCantidadVentana.value).toFixed(2);
   elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
