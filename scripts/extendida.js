@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   CostoTotal = CostoTotal.toFixed(2);
 
-  //elementHTMLCantidadVentana.addEventListener("change", function(){
     var elementHTMLPrecioVentana = document.getElementById("precioVentanaCompra");
     elementHTMLPrecioVentana.innerHTML = "Precio: $" + Precio * elementHTMLCantidadVentana.value;
 
@@ -54,9 +53,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var elementHTMLIvaVentana = document.getElementById("Iva");
     elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
-
-  //});
-
 
 //Abrir Ventana
   Envio = 0;
@@ -164,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function(){
       FormEnvioFisico.style.display = "block";
       Direccion.style.display = "block";
 //Agregar costo de envio fisico por defecto (%0.5)
-      Envio = PrecioConIva * 0.005;
+      Envio = PrecioConIva * 0.005 * elementHTMLCantidadVentana.value;
       CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
       elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
       document.getElementById('comun').checked = true;
@@ -175,17 +171,37 @@ document.addEventListener("DOMContentLoaded", function(){
 //Agregar costo al precio total segun envio fisico selecionado
   FormEnvioFisico.addEventListener("click", function(){
     if (document.getElementById('comun').checked == true) {
-      Envio = PrecioConIva * 0.005;
+      Envio = PrecioConIva * 0.005 * elementHTMLCantidadVentana.value;
       CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
       elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
       elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
     }else if(document.getElementById('especial').checked == true){
-      Envio = PrecioConIva * 0.02;
+      Envio = PrecioConIva * 0.02 * elementHTMLCantidadVentana.value;
       CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
       elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
       elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
     }else{
-      Envio = PrecioConIva * 0.05;
+      Envio = PrecioConIva * 0.05 * elementHTMLCantidadVentana.value;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
+    }
+  });
+
+//Agregar costo al envio segun cantidad selecionada
+  elementHTMLCantidadVentana.addEventListener("change", function(){
+    if (document.getElementById('comun').checked == true) {
+      Envio = PrecioConIva * 0.005 * elementHTMLCantidadVentana.value;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
+    }else if(document.getElementById('especial').checked == true){
+      Envio = PrecioConIva * 0.02 * elementHTMLCantidadVentana.value;
+      CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
+      elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
+      elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
+    }else{
+      Envio = PrecioConIva * 0.05 * elementHTMLCantidadVentana.value;
       CostoTotal = (PrecioConIva * elementHTMLCantidadVentana.value) + Envio;
       elementHTMLCostoTotalVentana.innerHTML = "Total a pagar: $" + CostoTotal.toFixed(2);
       elementHTMLEnvioVentana.innerHTML = "Envio: $" + (Envio).toFixed(2);
