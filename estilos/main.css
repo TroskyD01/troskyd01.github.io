@@ -787,6 +787,12 @@ a:visited {
   margin-top: -32.5em;
   margin-left: 48%;
   width: 50%;
+  display: none;
+}
+#ventanaCompra #email {
+  margin-top: -32.5em;
+  margin-left: 48%;
+  width: 50%;
 }
 #ventanaCompra #envio p{
   margin-left: 5%;

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(){
   var elementHTMLCantidadVentana = document.getElementById("cantidadJuegos");
   elementHTMLCantidadVentana.setAttribute("value", 1);
 
-//variables de precios y envios
+//Variables de precios y envios
   var Precio = parseFloat(arrJuegos[i].precio.replace(/[^0-9\.]/g, ''), 10); //convertir el string precio a numeros para hacer calculo de iva
   var PrecioConIva = Precio * 1.22;
   var Iva = Precio * 0.22;
@@ -53,6 +53,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var elementHTMLIvaVentana = document.getElementById("Iva");
     elementHTMLIvaVentana.innerHTML = "IVA 22%: $" + Iva.toFixed(2);
+
+//Ingresar nombre e email
+  var ContinuarCompra = document.getElementById("continuar");
+  var DivEnvios = document.getElementById("envio");
+  var DivNombreEmail = document.getElementById("email");
+  var EmailIN = document.getElementById("emailInput");
+  var NombreIN = document.getElementById("nombreInput");
+  var DatosIngresados = 0;
+
+  ContinuarCompra.addEventListener("click", function(){
+    if (EmailIN.value != '' && NombreIN.value != '') {
+    DivNombreEmail.style.display = "none";
+    DivEnvios.style.display = "block";
+    DatosIngresados = 1;
+    }else {
+      alert("ERROR: Debe ingresar los datos requeridos!");
+    }
+  });
 
 //Abrir Ventana
   Envio = 0;
@@ -77,6 +95,9 @@ document.addEventListener("DOMContentLoaded", function(){
       document.getElementById('digital').checked = true;
       FormEnvioFisico.style.display = "none";
       Direccion.style.display = "none";
+      DivNombreEmail.style.display = "block";
+      DivEnvios.style.display = "none";
+      DatosIngresados = 0;
       elementHTMLCantidadVentana.value = 1;
       PrecioConIva = Precio * 1.22;
       Iva = Precio * 0.22;
@@ -93,8 +114,8 @@ document.addEventListener("DOMContentLoaded", function(){
   elemntHTMLFinalizarCompra.addEventListener("click", function(){
   var DireccionTextArea = document.getElementById("direccionText");
   var VentanaComprar = document.getElementById("ventanaCompra");
-
-    if (document.getElementById('digital').checked == true) {
+  //si el envio selecionado es el digital y los datos de nombre , email fueron ingresados se finaliza la compra.
+    if (document.getElementById('digital').checked == true && DatosIngresados==1) {
       alert("Finalizado con éxito! , Gracias por su compra");
       VentanaComprar.style.display = "none";
     //Poner los valores al default cuando se finaliza
@@ -104,6 +125,9 @@ document.addEventListener("DOMContentLoaded", function(){
       document.getElementById('digital').checked = true;
       FormEnvioFisico.style.display = "none";
       Direccion.style.display = "none";
+      DivNombreEmail.style.display = "block";
+      DivEnvios.style.display = "none";
+      DatosIngresados = 0;
       elementHTMLCantidadVentana.value = 1;
       PrecioConIva = Precio * 1.22;
       Iva = Precio * 0.22;
@@ -116,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function(){
       DireccionTextArea.value = '';
     }
     else {
+    //si el envio selecionado es el fisico y los datos de direccion fueron ingresados se finaliza la compra.
       if (DireccionTextArea.value != '') {
         alert("Finalizado con éxito! , Gracias por su compra");
         VentanaComprar.style.display = "none";
@@ -126,6 +151,9 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById('digital').checked = true;
         FormEnvioFisico.style.display = "none";
         Direccion.style.display = "none";
+        DivNombreEmail.style.display = "block";
+        DivEnvios.style.display = "none";
+        DatosIngresados = 0;
         elementHTMLCantidadVentana.value = 1;
         PrecioConIva = Precio * 1.22;
         Iva = Precio * 0.22;
@@ -138,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function(){
         DireccionTextArea.value = '';
       }
       else {
-        alert("ERROR: Debe ingresar una dirección.");
+        alert("ERROR: Debe ingresar los datos obligatorios!");
       }
     };
 });
