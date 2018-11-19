@@ -722,12 +722,11 @@ a:visited {
 }
 /*Estilo de la ventana de compra de juego*/
 #ventanaCompra{
-  height: 36em;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: -60em;
-  float: left;
-  position: relative;
+  height: 32%;
+  width: 35%;
+  left: 32%;
+  top: 32%;
+  position: fixed;
   z-index: 2;
   display: none;
 }
@@ -747,13 +746,14 @@ a:visited {
   width: 42.5%;
   height: 4em;
 }
-#ventanaCompra #cancelarCompra {
-  margin-left: 5%;
-  margin-top: -4em;
+#ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
+ position: fixed;
+ top: 59.5%;
+ width: 15%;
+ left: 33%;
 }
-#ventanaCompra #finalizarCompra , #ventanaCompra #direccion #finalizar {
-  margin-left: 52.5%;
-  margin-top: 3em;
+#ventanaCompra #finalizarCompra{
+ left: 51%;
 }
 #ventanaCompra p{
   margin-left: 2%;
@@ -784,15 +784,16 @@ a:visited {
   cursor: pointer;
 }
 #ventanaCompra #envio {
-  margin-top: -32.5em;
-  margin-left: 48%;
-  width: 50%;
+  position: fixed;
+  top: 32%;
+  left: 47.5%;
+  width: 15%;
   display: none;
 }
 #ventanaCompra #email {
-  margin-top: -32.5em;
-  margin-left: 48%;
-  width: 50%;
+  position: fixed;
+  top: 33%;
+  left: 49%;
 }
 #ventanaCompra #envio p{
   margin-left: 5%;
@@ -813,10 +814,10 @@ a:visited {
 }
 #ventanaCompra #cantidad{
   width: 20%;
-  left: 50%;
+  left: 49%;
   height: 3em;
   position:fixed;
-  top:59em;
+  top: 55.5%;
 }
 #ventanaCompra #cantidad #cantidadJuegos{
   left: 30%;
@@ -826,9 +827,11 @@ a:visited {
   top: -1.8em;
 }
 #ventanaCompra #direccion{
-  margin-top: 21em;
+  top: 64.5%;
+  width: 35%;
   height: 12em;
   display: none;
+  position: fixed;
 }
 #ventanaCompra #direccion textarea{
   width: 95%;
@@ -1155,58 +1158,39 @@ a:visited {
     margin: 2em 0.5em 1em 0.5em;
   }
   /* estilos de ventana de compra */
-  #ventanaCompra{
-    height: 33em;
-    width: 100%;
-    margin-left: 0;
-    margin-top: -60em;
+  #ventanaCompra #direccion , #ventanaCompra{
+    width: 98%;
+    left: 1%;
   }
-  #ventanaCompra #ventanaPortada{
-    height: 10em;
-    width: 46%;
-    margin: 0.5em;
-    margin-left: 1%;
+  #ventanaCompra{
+    height: 28%;
+    top: 32%;
+  }
+  #ventanaCompra #direccion{
+    top: 61%;
+  }
+  #ventanaCompra p , #ventanaCompra #envio p , #ventanaCompra #envio #titulo {
+    font-size: 1.3em;
   }
   #ventanaCompra #envio {
-    margin-top: -32em;
-    margin-left: 48%;
-    width: 50%;
-  }
-  #ventanaCompra p ,   #ventanaCompra #envio p , #ventanaCompra #envio #titulo{
-    font-size: 1.6em;
-  }
-  #ventanaCompra #envio p{
-    margin-left: 8%;
-  }
-  #ventanaCompra #cantidad{
-    width: 20%;
-    left: 4.8%;
-    height: 3em;
-    position: fixed;
-    top: 38.5em;
-    z-index: 3;
-  }
-  #ventanaCompra #cantidad #cantidadJuegos{
-    width: 12%;
-    height: 1.5em;
-    position: relative;
-    margin-left: 80%;
-  }
-  #ventanaCompra #cancelarCompra {
-    margin-left: 1%;
-    margin-top: -4em;
-  }
-  #ventanaCompra #finalizarCompra {
-    margin-left: 50.5%;
-    margin-top: 6em;
-
+    top: 32%;
+    left: 45%;
+    width: 45%;
   }
   #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
-    width: 48.5%;
+   top: 55%;
+   width: 35%;
+   left: 10%;
   }
-  #ventanaCompra #finalizarCompra img , #ventanaCompra #cancelarCompra img {
-    width: 22%;
+  #ventanaCompra #finalizarCompra{
+   left: 55%;
   }
+  #ventanaCompra #cantidad{
+    width: 45%;
+    left: 49%;
+    top: 51.5%;
+  }
+
   /* Estilos del boton de cerrar galeria*/
   #extendidaJuego #portada #xx{
     width: 15%;
@@ -1214,10 +1198,7 @@ a:visited {
     margin-left: 189%;
     margin-top: -41em;
   }
-  /* Estilos del apartado de direccion envio*/
-  #ventanaCompra #direccion{
-    margin-top: 13em;
-  }
+
 }
 
   /*ESTILOS PARA TABLETS */
@@ -1402,57 +1383,7 @@ a:visited {
     height: inherit;
   }
   /* estilos de ventana de compra */
-  #ventanaCompra{
-    height: 33em;
-    width: 96%;
-    margin-left: 3%;
-    margin-top: -45em;
-  }
-  #ventanaCompra #ventanaPortada{
-    height: 10em;
-    width: 43%;
-    margin: 0.5em;
-    margin-left: 1%;
-  }
-  #ventanaCompra #envio {
-    margin-top: -32em;
-    margin-left: 48%;
-    width: 50%;
-  }
-  #ventanaCompra p ,   #ventanaCompra #envio p , #ventanaCompra #envio #titulo{
-    font-size: 1.6em;
-  }
-  #ventanaCompra #envio p{
-    margin-left: 8%;
-  }
-  #ventanaCompra #cantidad{
-    width: 20%;
-    left: 4.8%;
-    height: 3em;
-    position: fixed;
-    top: 38.5em;
-    z-index: 3;
-  }
-  #ventanaCompra #cantidad #cantidadJuegos{
-    width: 12%;
-    height: 1.5em;
-    position: relative;
-    margin-left: 80%;
-  }
-  #ventanaCompra #cancelarCompra {
-    margin-left: 3%;
-    margin-top: -4em;
-  }
-  #ventanaCompra #finalizarCompra {
-    margin-left: 50.5%;
-    margin-top: 6em;
-  }
-  #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
-    width: 46%;
-  }
-  #ventanaCompra #finalizarCompra img , #ventanaCompra #cancelarCompra img {
-    width: 20%;
-  }
+
   /* Estilos del boton de cerrar galeria*/
   #extendidaJuego #portada #xx{
     width: 18%;
@@ -1460,9 +1391,38 @@ a:visited {
     margin-left: -20%;
     margin-top: -14em;
   }
-  /* Estilos del apartado de direccion envio*/
+  /* estilos de ventana de compra */
+  #ventanaCompra #direccion , #ventanaCompra{
+    width: 94%;
+    left: 3%;
+  }
+  #ventanaCompra{
+    height: 28%;
+    top: 32%;
+  }
   #ventanaCompra #direccion{
-    margin-top: 19em;
+    top: 61%;
+  }
+  #ventanaCompra p , #ventanaCompra #envio p , #ventanaCompra #envio #titulo {
+    font-size: 1.3em;
+  }
+  #ventanaCompra #envio {
+    top: 32%;
+    left: 45%;
+    width: 45%;
+  }
+  #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
+   top: 55%;
+   width: 35%;
+   left: 10%;
+  }
+  #ventanaCompra #finalizarCompra{
+   left: 55%;
+  }
+  #ventanaCompra #cantidad{
+    width: 45%;
+    left: 49%;
+    top: 51.5%;
   }
 }
 
@@ -1505,9 +1465,7 @@ a:visited {
       max-width: 20em;
     }
     /* Estilos del apartado de direccion envio*/
-    #ventanaCompra #direccion{
-      margin-top: 19em;
-    }
+
 }
 @media only screen and (min-width: 681px) and (max-width: 1023px) {
   /* Estilos de juegos index */
@@ -1566,60 +1524,38 @@ a:visited {
   #extendidaJuego #valoracion #valoracion-juego{
     margin-left: 40%;
   }
-  #ventanaCompra{
-    height: 33em;
+  /* estilos de ventana de compra */
+  #ventanaCompra #direccion , #ventanaCompra{
     width: 70%;
-    margin-left: 15%;
-    margin-top: -60em;
+    left: 15%;
   }
-  #ventanaCompra #ventanaPortada{
-    height: 10em;
-    width: 40%;
-    margin: 0.5em;
-    margin-left: 1%;
+  #ventanaCompra{
+    height: 28%;
+    top: 32%;
+  }
+  #ventanaCompra #direccion{
+    top: 61%;
+  }
+  #ventanaCompra p , #ventanaCompra #envio p , #ventanaCompra #envio #titulo {
+    font-size: 1.5em;
   }
   #ventanaCompra #envio {
-    margin-top: -32em;
-    margin-left: 48%;
-    width: 50%;
-  }
-  #ventanaCompra p ,   #ventanaCompra #envio p , #ventanaCompra #envio #titulo{
-    font-size: 1.6em;
-  }
-  #ventanaCompra #envio p{
-    margin-left: 8%;
-  }
-  #ventanaCompra #cantidad{
-    width: 20%;
-    left: 4.8%;
-    height: 3em;
-    position: fixed;
-    top: 38.5em;
-    z-index: 3;
-  }
-  #ventanaCompra #cantidad #cantidadJuegos{
-    width: 12%;
-    height: 1.5em;
-    position: relative;
-    margin-left: 80%;
-  }
-  #ventanaCompra #cancelarCompra {
-    margin-left: 3%;
-    margin-top: -4em;
-  }
-  #ventanaCompra #finalizarCompra {
-    margin-left: 50.5%;
-    margin-top: 6em;
+    top: 32%;
+    left: 45%;
+    width: 35%;
   }
   #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
-    width: 46%;
+   top: 55%;
+   width: 30%;
+   left: 18%;
   }
-  #ventanaCompra #finalizarCompra img , #ventanaCompra #cancelarCompra img {
-    width: 20%;
+  #ventanaCompra #finalizarCompra{
+   left: 52%;
   }
-  /* Estilos del apartado de direccion envio*/
-  #ventanaCompra #direccion{
-    margin-top: 19em;
+  #ventanaCompra #cantidad{
+    width: 45%;
+    left: 49%;
+    top: 51.5%;
   }
 }
 
@@ -1640,36 +1576,38 @@ a:visited {
   #contenedor1 #catalogocentral p{
     font-size: 1.2em;
   }
-  /* Estilos del apartado de direccion envio*/
-  #ventanaCompra #direccion{
-    margin-top: 19em;
-  }
   /* estilos de ventana de compra */
+  #ventanaCompra #direccion , #ventanaCompra{
+    width: 62%;
+    left: 19%;
+  }
   #ventanaCompra{
-    height: 34em;
-    width: 70%;
-    margin-left: 15%;
-    margin-top: -60em;
+    height: 28%;
+    top: 32%;
   }
-  #ventanaCompra p ,   #ventanaCompra #envio p , #ventanaCompra #envio #titulo{
-    font-size: 1.8em;
+  #ventanaCompra #direccion{
+    top: 61%;
   }
-  #ventanaCompra #envio p{
-    margin-left: 8%;
+  #ventanaCompra p , #ventanaCompra #envio p , #ventanaCompra #envio #titulo {
+    font-size: 1.5em;
+  }
+  #ventanaCompra #envio {
+    top: 32%;
+    left: 45%;
+    width: 25%;
+  }
+  #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
+   top: 55.5%;
+   width: 22%;
+   left: 26%;
+  }
+  #ventanaCompra #finalizarCompra{
+   left: 52%;
   }
   #ventanaCompra #cantidad{
-    width: 20%;
-    left: 4.8%;
-    height: 3em;
-    position: fixed;
-    top: 38.5em;
-    z-index: 3;
-  }
-  #ventanaCompra #cantidad #cantidadJuegos{
-    width: 12%;
-    height: 1.5em;
-    position: relative;
-    margin-left: 80%;
+    width: 21%;
+    left: 49%;
+    top: 54.5%;
   }
 }
   /*ARREGLOS PARA DISTINTAS RESOLUCIONES */
@@ -1678,10 +1616,50 @@ a:visited {
   #contenedor1 , #cabeza{
     width: 93%;
   }
+  #ventanaCompra #envio {
+    top: 32%;
+    left: 46%;
+    width: 18%;
+  }
+  #ventanaCompra #cantidad{
+    width: 20%;
+    left: 49%;
+    top: 54.5%;
+  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
   #extendidaJuego #fotomenor ul li{
     width: 32.6%;
     margin-left: 0.1em;
+  }
+  /* estilos de ventana de compra */
+  #ventanaCompra #direccion , #ventanaCompra{
+    width: 50%;
+    left: 25%;
+  }
+  #ventanaCompra{
+    height: 30%;
+    top: 32%;
+  }
+  #ventanaCompra #direccion{
+    top: 63%;
+  }
+  #ventanaCompra #envio {
+    top: 32%;
+    left: 47%;
+    width: 22%;
+  }
+  #ventanaCompra #cantidad{
+    width: 21%;
+    left: 49%;
+    top: 53%;
+  }
+  #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
+   top: 57.5%;
+   width: 22%;
+   left: 26%;
+  }
+  #ventanaCompra #finalizarCompra{
+   left: 52%;
   }
 }
