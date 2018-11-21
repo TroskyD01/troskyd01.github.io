@@ -1164,21 +1164,21 @@ a:visited {
   }
   #ventanaCompra{
     height: 28em;
-    top: 30em;
+    top: 20em;
   }
   #ventanaCompra #direccion{
-    top: 58.5em;
+    top: 48.5em;
   }
   #ventanaCompra p , #ventanaCompra #envio p , #ventanaCompra #envio #titulo {
     font-size: 1.3em;
   }
   #ventanaCompra #envio {
-    top: 29em;
+    top: 19em;
     left: 40%;
     width: 49%;
   }
   #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
-   top: 53.5em;
+   top: 43.5em;
    width: 35%;
    left: 10%;
   }
@@ -1188,7 +1188,12 @@ a:visited {
   #ventanaCompra #cantidad{
     width: 72%;
     left: 49%;
-    top: 51em;
+    top: 41em;
+  }
+  #ventanaCompra #email {
+    position: fixed;
+    top: 20.5em;
+    left: 49%;
   }
 
   /* Estilos del boton de cerrar galeria*/
