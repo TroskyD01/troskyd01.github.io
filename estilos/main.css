@@ -1533,23 +1533,28 @@ a:visited {
   }
   #ventanaCompra{
     height: 28em;
-    top: 30em;
+    top: 10em;
     width: 80%;
     left: 10%;
   }
   #ventanaCompra #direccion{
-    top: 58.5em;
+    top: 38.5em;
   }
   #ventanaCompra p , #ventanaCompra #envio p , #ventanaCompra #envio #titulo {
     font-size: 1.3em;
   }
   #ventanaCompra #envio {
-    top: 29em;
+    top: 9em;
     left: 40%;
     width: 45%;
   }
+  #ventanaCompra #email {
+    position: fixed;
+    top: 10.5em;
+    left: 49%;
+  }
   #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
-   top: 53.5em;
+   top: 33.5em;
    width: 32%;
    left: 15%;
   }
@@ -1559,7 +1564,7 @@ a:visited {
   #ventanaCompra #cantidad{
     width: 72%;
     left: 49%;
-    top: 51em;
+    top: 31em;
   }
 }
 
