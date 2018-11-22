@@ -1603,21 +1603,26 @@ a:visited {
   }
   #ventanaCompra{
     height: 28em;
-    top: 30em;
+    top: 8em;
   }
   #ventanaCompra #direccion{
-    top: 58.5em;
+    top: 36.5em;
   }
   #ventanaCompra p , #ventanaCompra #envio p , #ventanaCompra #envio #titulo {
     font-size: 1.3em;
   }
   #ventanaCompra #envio {
-    top: 29em;
+    top: 7em;
     left: 42%;
     width: 39%;
   }
+  #ventanaCompra #email {
+    position: fixed;
+    top: 8.5em;
+    left: 49%;
+  }
   #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
-   top: 53.5em;
+   top: 31.5em;
    width: 30%;
    left: 18%;
   }
@@ -1627,7 +1632,7 @@ a:visited {
   #ventanaCompra #cantidad{
     width: 72%;
     left: 49%;
-    top: 51em;
+    top: 29em;
   }
 }
 
@@ -1655,21 +1660,26 @@ a:visited {
   }
   #ventanaCompra{
     height: 28em;
-    top: 30em;
+    top: 15em;
   }
   #ventanaCompra #direccion{
-    top: 58.5em;
+    top: 43.5em;
   }
   #ventanaCompra p , #ventanaCompra #envio p , #ventanaCompra #envio #titulo {
     font-size: 1.3em;
   }
   #ventanaCompra #envio {
-    top: 29em;
+    top: 14em;
     left: 45%;
     width: 30%;
   }
+  #ventanaCompra #email {
+    position: fixed;
+    top: 16em;
+    left: 49%;
+  }
   #ventanaCompra #cancelarCompra , #ventanaCompra #finalizarCompra{
-   top: 53.5em;
+   top: 38.5em;
    width: 28%;
    left: 21%;
   }
@@ -1679,7 +1689,7 @@ a:visited {
   #ventanaCompra #cantidad{
     width: 20%;
     left: 49%;
-    top: 51em;
+    top: 36em;
   }
 }
   /*ARREGLOS PARA DISTINTAS RESOLUCIONES */
